@@ -376,6 +376,12 @@ def write_jsonl(path, records):
             f.write(json.dumps(r, ensure_ascii=False) + "\n")
 
 
+def count_data_lines(path):
+    # so dong du lieu cua file CSV (tru header)
+    with open(path, encoding="utf-8") as f:
+        return sum(1 for _ in f) - 1
+
+
 def write_csv(path, header, rows):
     # lineterminator co dinh de output tat dinh tren moi he dieu hanh
     with open(path, "w", encoding="utf-8", newline="") as f:
@@ -441,6 +447,15 @@ def main():
         for p in products
     ])
     write_month_files(raw_dir, orders)
+
+    # E01: nguon giao lai file thang 6, noi dung y het
+    e01 = {}
+    for prefix in ("orders", "order_items"):
+        src = raw_dir / f"{prefix}_{YEAR}_06.csv"
+        dst = raw_dir / f"{prefix}_{YEAR}_06_resend.csv"
+        dst.write_bytes(src.read_bytes())
+        e01[prefix] = count_data_lines(dst)
+    errors["E01"] = e01
     print(f"Da ghi du lieu vao {raw_dir}")
     print("So loi da cai:", errors)
 

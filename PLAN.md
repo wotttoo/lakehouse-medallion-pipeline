@@ -77,7 +77,7 @@ Task 2–11, 16–18, 19–28, 29–32 không song song được vì cùng sửa
   - File: `data_generator/generate_data.py`, `data/raw/orders_2025_MM.csv`, `data/raw/order_items_2025_MM.csv`
   - Kiểm chứng: `cat data/raw/orders_2025_*.csv | cut -d, -f2 | grep -c 2027` lớn hơn 0; `cat data/raw/order_items_2025_*.csv | awk -F, '$4<=0 && NR>1' | wc -l` lớn hơn 0.
 
-- [ ] **9. Cài lỗi E01**
+- [x] **9. Cài lỗi E01**
   - Việc: tạo `orders_2025_06_resend.csv` và `order_items_2025_06_resend.csv`, nội dung y hệt tháng 6.
   - File: `data_generator/generate_data.py`, `data/raw/orders_2025_06_resend.csv`, `data/raw/order_items_2025_06_resend.csv`
   - Kiểm chứng: `cmp data/raw/orders_2025_06.csv data/raw/orders_2025_06_resend.csv` và `cmp data/raw/order_items_2025_06.csv data/raw/order_items_2025_06_resend.csv` không báo khác.
