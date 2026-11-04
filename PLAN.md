@@ -87,7 +87,7 @@ Task 2–11, 16–18, 19–28, 29–32 không song song được vì cùng sửa
   - File: `data_generator/generate_data.py`, `data/_expected/expected_counts.json`
   - Kiểm chứng: `python -c "import json; d=json.load(open('data/_expected/expected_counts.json')); assert set(d)=={'errors','tables','business'}; assert len(d['errors'])==10; print(len(d['tables']))"` in 19 (5 Bronze, 7 Silver, 7 Gold).
 
-- [ ] **11. Xác nhận generator tất định**
+- [x] **11. Xác nhận generator tất định**
   - Việc: chạy lại hai lần, sửa mọi nguồn không tất định nếu có; kiểm tra thủ công vài file.
   - File: `data_generator/generate_data.py`
   - Kiểm chứng: lệnh `h()` trong `CLAUDE.md` in `DETERMINISTIC`; chạy với `--seed 7 --out <thư mục scratchpad>` ra dữ liệu khác seed 42.
