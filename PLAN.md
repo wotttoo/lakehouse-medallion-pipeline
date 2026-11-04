@@ -236,7 +236,7 @@ Mỗi bước xử lý một cell.
 
 ### Giai đoạn 7: Tài liệu và bản học viên
 
-- [ ] **38. `README.md`** (nhóm C)
+- [x] **38. `README.md`** (nhóm C)
   - Việc: mục tiêu, cấu trúc thư mục, cách chạy trên Databricks Free Edition, cách chạy local, phiên bản thư viện.
   - File: `README.md`
   - Kiểm chứng: `grep -cE '^#+ ' README.md` lớn hơn hoặc bằng 5; `grep -E 'pyspark|delta-spark|Volume' README.md` có kết quả.

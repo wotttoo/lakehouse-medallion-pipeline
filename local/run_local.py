@@ -7,6 +7,7 @@ Vi du:
     python local/run_local.py --clean            # chay 00 -> 06
     python local/run_local.py --clean --twice    # chay 01 -> 04 hai lan roi moi validation
     python local/run_local.py --until 02         # dung sau notebook 02
+    python local/run_local.py --notebooks notebooks_student   # chay ban hoc vien
 """
 import argparse
 import os
@@ -36,8 +37,8 @@ def clean():
             print(f"[clean] Da xoa file {name}")
 
 
-def run_notebook(name, namespace):
-    path = NOTEBOOK_DIR / f"{name}.py"
+def run_notebook(name, namespace, notebook_dir):
+    path = notebook_dir / f"{name}.py"
     print(f"\n{'=' * 70}\n>>> {name}\n{'=' * 70}")
     start = time.time()
     code = compile(path.read_text(encoding="utf-8"), str(path), "exec")
@@ -60,18 +61,21 @@ def main():
     ap.add_argument("--clean", action="store_true", help="xoa warehouse/metastore local truoc khi chay")
     ap.add_argument("--twice", action="store_true", help="chay 01-04 hai lan de kiem tra idempotent")
     ap.add_argument("--until", metavar="NN", help="dung sau notebook NN, vi du 02")
+    ap.add_argument("--notebooks", default=str(NOTEBOOK_DIR.relative_to(ROOT)),
+                    help="thu muc notebook, mac dinh notebooks")
     args = ap.parse_args()
 
     os.chdir(ROOT)  # duong dan trong notebook la tuong doi so voi goc project
     if args.clean:
         clean()
 
+    notebook_dir = ROOT / args.notebooks
     plan = build_plan(args.twice, args.until)
     print("Thu tu chay:", " -> ".join(plan))
     namespace = {"__name__": "__main__"}
     start = time.time()
     for name in plan:
-        run_notebook(name, namespace)
+        run_notebook(name, namespace, notebook_dir)
     print(f"\nPIPELINE OK sau {time.time() - start:.1f}s")
 
 
