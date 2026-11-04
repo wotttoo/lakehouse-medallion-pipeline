@@ -246,22 +246,22 @@ Mỗi bước xử lý một cell.
   - File: `notebooks_student/00_config.py`, `notebooks_student/01_setup.py`, `notebooks_student/06_validation.py`
   - Kiểm chứng: `for f in 00_config 01_setup 06_validation; do cmp notebooks/$f.py notebooks_student/$f.py; done` không báo khác.
 
-- [ ] **40. Bản học viên `02_bronze`** (nhóm C)
+- [x] **40. Bản học viên `02_bronze`** (nhóm C)
   - Việc: thay phần lọc file chưa nạp và đọc nguồn bằng TODO có gợi ý.
   - File: `notebooks_student/02_bronze.py`
   - Kiểm chứng: `python -m py_compile notebooks_student/02_bronze.py`; `grep -c '# TODO' notebooks_student/02_bronze.py` từ 3 đến 6.
 
-- [ ] **41. Bản học viên `03_silver`** (nhóm C)
+- [x] **41. Bản học viên `03_silver`** (nhóm C)
   - Việc: TODO cho ép kiểu, chuẩn hóa, khử trùng window, quarantine, MERGE.
   - File: `notebooks_student/03_silver.py`
   - Kiểm chứng: như task 40 với `03_silver`.
 
-- [ ] **42. Bản học viên `04_gold`** (nhóm C)
+- [x] **42. Bản học viên `04_gold`** (nhóm C)
   - Việc: TODO cho surrogate key, dựng fact, agg.
   - File: `notebooks_student/04_gold.py`
   - Kiểm chứng: như task 40 với `04_gold`.
 
-- [ ] **43. Bản học viên `05_serving`** (nhóm C)
+- [x] **43. Bản học viên `05_serving`** (nhóm C)
   - Việc: TODO cho các truy vấn nghiệp vụ.
   - File: `notebooks_student/05_serving.py`
   - Kiểm chứng: như task 40 với `05_serving`.
