@@ -241,7 +241,7 @@ Mỗi bước xử lý một cell.
   - File: `README.md`
   - Kiểm chứng: `grep -cE '^#+ ' README.md` lớn hơn hoặc bằng 5; `grep -E 'pyspark|delta-spark|Volume' README.md` có kết quả.
 
-- [ ] **39. Sao chép notebook giữ nguyên sang bản học viên**
+- [x] **39. Sao chép notebook giữ nguyên sang bản học viên**
   - Việc: chép `00_config`, `01_setup`, `06_validation` sang `notebooks_student/`.
   - File: `notebooks_student/00_config.py`, `notebooks_student/01_setup.py`, `notebooks_student/06_validation.py`
   - Kiểm chứng: `for f in 00_config 01_setup 06_validation; do cmp notebooks/$f.py notebooks_student/$f.py; done` không báo khác.
