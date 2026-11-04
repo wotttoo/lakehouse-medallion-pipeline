@@ -116,7 +116,7 @@ Task 2–11, 16–18, 19–28, 29–32 không song song được vì cùng sửa
 
 ### Giai đoạn 3: Bronze
 
-- [ ] **16. Nạp các nguồn CSV**
+- [x] **16. Nạp các nguồn CSV**
   - Việc: đọc `stores`, `customers*`, `orders*`, `order_items*` toàn string; thêm `_ingested_at`, `_source_file`; ghi append.
   - File: `notebooks/02_bronze.py`
   - Kiểm chứng: `python local/run_local.py --clean --until 02 && python local/check_layer.py bronze.orders && python local/check_layer.py bronze.order_items`.
