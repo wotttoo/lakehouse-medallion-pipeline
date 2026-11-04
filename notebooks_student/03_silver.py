@@ -284,11 +284,11 @@ merge_into(orders_valid, "orders", ["order_id"])
 items = trim_strings(to_snake_case(spark.table(tbl("bronze", "order_items"))))
 items = (
     items
-    .withColumn("line_no", F.col("line_no").try_cast("int"))
-    .withColumn("quantity", F.col("quantity").try_cast("int"))
-    # TODO: bo dau cham ngan nghin (F.regexp_replace) roi try_cast sang "bigint"
+    .withColumn("line_no", F.expr("try_cast(line_no AS INT)"))
+    .withColumn("quantity", F.expr("try_cast(quantity AS INT)"))
+    # TODO: bo dau cham ngan nghin (regexp_replace) roi try_cast sang BIGINT, viet trong F.expr(...)
     .withColumn("unit_price", ...)
-    .withColumn("discount", F.col("discount").try_cast("bigint"))
+    .withColumn("discount", F.expr("try_cast(discount AS BIGINT)"))
 )
 
 bad_casts = items.filter(
