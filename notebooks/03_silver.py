@@ -197,3 +197,73 @@ products = (
 
 products = drop_technical(latest_per_key(products, ["product_id"]))
 merge_into(products, "products", ["product_id"])
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ## `silver.orders`
+# MAGIC
+# MAGIC ### Bước 1 · Ép kiểu `order_date` (E03)
+# MAGIC
+# MAGIC Nguồn trộn 3 định dạng: `2025-03-01`, `01/03/2025` (ngày/tháng/năm), `2025/03/01`.
+# MAGIC Ta thử lần lượt từng định dạng bằng `try_to_timestamp` (trả về NULL nếu không khớp, không báo lỗi),
+# MAGIC rồi lấy kết quả đầu tiên khác NULL bằng `coalesce`.
+# MAGIC
+# MAGIC `customer_id` rỗng (E10) được Spark đọc thành NULL. Đó là **khách vãng lai**, giữ nguyên.
+
+# COMMAND ----------
+
+DATE_FORMATS = ["yyyy-MM-dd", "dd/MM/yyyy", "yyyy/MM/dd"]
+
+
+def parse_date(col_name):
+    return F.coalesce(*[F.try_to_timestamp(F.col(col_name), F.lit(f)).cast("date") for f in DATE_FORMATS])
+
+
+orders = trim_strings(to_snake_case(spark.table(tbl("bronze", "orders"))))
+orders = orders.withColumn("order_date", parse_date("order_date"))
+
+bad_dates = orders.filter("order_date IS NULL").count()
+assert bad_dates == 0, f"{bad_dates} dong co order_date khong parse duoc"
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ### Bước 2 · Khử trùng (E01, E02)
+# MAGIC
+# MAGIC Một `order_id` có thể xuất hiện nhiều lần: trùng trong cùng file (E02) hoặc do file tháng 6 được giao lại (E01).
+# MAGIC Dùng window function `row_number()` chia theo `order_id`, sắp bản nạp mới nhất lên đầu, giữ dòng số 1.
+
+# COMMAND ----------
+
+orders = drop_technical(latest_per_key(orders, ["order_id"]))
+
+n_orders = orders.count()
+n_ids = orders.select("order_id").distinct().count()
+assert n_orders == n_ids, f"Van con trung: {n_orders} dong nhung {n_ids} order_id"
+print(f"Sau khu trung: {n_orders} don")
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ### Bước 3 · Tách quarantine (E09) và MERGE
+# MAGIC
+# MAGIC Dữ liệu là năm 2025, nên đơn có `order_date` sau ngày cuối kỳ là đơn **ở tương lai** (lỗi nhập liệu).
+# MAGIC Đơn lỗi được ghi vào `silver.orders_rejected` kèm `reject_reason`. Bảng quarantine được **ghi đè** mỗi lần chạy.
+# MAGIC Phần hợp lệ được MERGE vào `silver.orders` theo `order_id`.
+
+# COMMAND ----------
+
+DATA_END_DATE = "2025-12-31"
+
+orders = orders.withColumn(
+    "reject_reason",
+    F.when(F.col("order_date") > F.lit(DATA_END_DATE).cast("date"), F.lit("E09: order_date o tuong lai")),
+)
+orders_rejected = orders.filter("reject_reason IS NOT NULL")
+orders_valid = orders.filter("reject_reason IS NULL").drop("reject_reason")
+
+# COMMAND ----------
+
+overwrite(orders_rejected, "orders_rejected")
+merge_into(orders_valid, "orders", ["order_id"])

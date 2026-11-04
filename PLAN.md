@@ -150,17 +150,17 @@ Mỗi bước xử lý một cell.
   - File: `notebooks/03_silver.py`
   - Kiểm chứng: như task 19 với `silver.products`.
 
-- [ ] **22. Ép kiểu orders**
+- [x] **22. Ép kiểu orders**
   - Việc: parse `order_date` 3 định dạng (E03), `01/03/2025` hiểu là `dd/MM/yyyy`. Thêm `assert` không dòng nào parse ra null.
   - File: `notebooks/03_silver.py`
   - Kiểm chứng: `python local/run_local.py --clean --until 03` exit code 0.
 
-- [ ] **23. Khử trùng orders**
+- [x] **23. Khử trùng orders**
   - Việc: `row_number()` theo `order_id`, ưu tiên `_ingested_at` mới nhất, tiêu chí phụ `_source_file` (E01, E02). Giữ `customer_id` rỗng (E10).
   - File: `notebooks/03_silver.py`
   - Kiểm chứng: thêm `assert` trong cell: số dòng bằng số `order_id` phân biệt; `python local/run_local.py --clean --until 03` exit code 0.
 
-- [ ] **24. Quarantine và MERGE orders**
+- [x] **24. Quarantine và MERGE orders**
   - Việc: tách E09 sang `silver.orders_rejected` (overwrite, có `reject_reason`); MERGE phần hợp lệ vào `silver.orders`.
   - File: `notebooks/03_silver.py`
   - Kiểm chứng: `python local/run_local.py --clean --until 03 && python local/check_layer.py silver.orders`.
