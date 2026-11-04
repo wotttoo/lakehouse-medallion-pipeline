@@ -1,0 +1,58 @@
+{
+  "errors": {
+    "E01": {
+      "orders": 1436,
+      "order_items": 3578
+    },
+    "E02": 200,
+    "E03": 600,
+    "E04": 1497,
+    "E05": 75,
+    "E06": 12,
+    "E07": 499,
+    "E08": 399,
+    "E09": 100,
+    "E10": 1010
+  },
+  "tables": {
+    "bronze.stores": 10,
+    "bronze.customers": 2150,
+    "bronze.products": 150,
+    "bronze.orders": 21636,
+    "bronze.order_items": 53490,
+    "silver.stores": 10,
+    "silver.customers": 2050,
+    "silver.products": 150,
+    "silver.orders": 19900,
+    "silver.orders_rejected": 100,
+    "silver.order_items": 48774,
+    "silver.order_items_rejected": 1138,
+    "gold.dim_date": 365,
+    "gold.dim_customer": 2051,
+    "gold.dim_product": 150,
+    "gold.dim_store": 10,
+    "gold.fact_sales": 48774,
+    "gold.agg_monthly_store_revenue": 120,
+    "gold.agg_category_city_revenue": 24
+  },
+  "business": {
+    "total_revenue": 2718752000,
+    "total_orders": 19796,
+    "guest_orders": 1005,
+    "customers_with_orders": 1375,
+    "returning_customers": 1130,
+    "returning_rate": 0.8218,
+    "aov": 137338.45,
+    "top_product_id": "P102",
+    "revenue_by_city": {
+      "Hà Nội": 1194113000,
+      "TP.HCM": 1226144000,
+      "Đà Nẵng": 298495000
+    },
+    "silver_customers_by_city": {
+      "Hà Nội": 787,
+      "TP.HCM": 937,
+      "Đà Nẵng": 326
+    }
+  }
+}
