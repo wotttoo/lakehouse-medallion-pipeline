@@ -12,12 +12,12 @@ Bộ code và data hoàn chỉnh cho bài học: pipeline Lakehouse 3 lớp cho 
 
 Project hoàn thành khi tất cả điều kiện sau đúng:
 
-- [ ] `python data_generator/generate_data.py` chạy không lỗi và tất định theo seed (lệnh kiểm tra trong `CLAUDE.md`, mục "Chạy test").
-- [ ] `python local/run_local.py --clean --twice` chạy hết, exit code 0, mọi `assert` trong `06_validation` pass.
-- [ ] Số dòng mọi bảng Bronze, Silver, Gold và các giá trị nghiệp vụ khớp `data/_expected/expected_counts.json`.
-- [ ] Lệnh grep API cấm ở task 37 không trả về dòng nào.
-- [ ] `notebooks_student/` có đủ 7 notebook; `00`, `01`, `06` giống hệt bản solution.
-- [ ] `README.md` và `REPORT.md` đủ nội dung theo SPEC mục 9 và 10, gồm danh sách điểm chưa kiểm chứng trên Databricks thật.
+- [x] `python data_generator/generate_data.py` chạy không lỗi và tất định theo seed (lệnh kiểm tra trong `CLAUDE.md`, mục "Chạy test").
+- [x] `python local/run_local.py --clean --twice` chạy hết, exit code 0, mọi `assert` trong `06_validation` pass.
+- [x] Số dòng mọi bảng Bronze, Silver, Gold và các giá trị nghiệp vụ khớp `data/_expected/expected_counts.json`.
+- [x] Lệnh grep API cấm ở task 37 không trả về dòng nào.
+- [x] `notebooks_student/` có đủ 7 notebook; `00`, `01`, `06` giống hệt bản solution.
+- [x] `README.md` và `REPORT.md` đủ nội dung theo SPEC mục 9 và 10, gồm danh sách điểm chưa kiểm chứng trên Databricks thật.
 
 ## 3. Nhóm task làm song song
 
@@ -266,7 +266,7 @@ Mỗi bước xử lý một cell.
   - File: `notebooks_student/05_serving.py`
   - Kiểm chứng: như task 40 với `05_serving`.
 
-- [ ] **44. `REPORT.md`**
+- [x] **44. `REPORT.md`**
   - Việc: chạy lại lần cuối để lấy số; ghi bảng số dòng so với kỳ vọng, kết quả 5 câu hỏi, phiên bản Python/PySpark/delta-spark, quyết định thiết kế, điểm chưa kiểm chứng trên Databricks.
   - File: `REPORT.md`
   - Kiểm chứng: `python local/run_local.py --clean --twice` exit code 0; `grep -cE '^#+ ' REPORT.md` lớn hơn hoặc bằng 5; `grep -c 'Databricks' REPORT.md` lớn hơn 0.
