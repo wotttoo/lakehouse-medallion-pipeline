@@ -94,7 +94,7 @@ Task 2–11, 16–18, 19–28, 29–32 không song song được vì cùng sửa
 
 ### Giai đoạn 2: Khung chạy
 
-- [ ] **12. `notebooks/00_config.py`**
+- [x] **12. `notebooks/00_config.py`**
   - Việc: `IS_DATABRICKS`, `CATALOG`, `RAW_PATH`, `tbl()`, SparkSession có Delta khi local (dùng `configure_spark_with_delta_pip`, `enableHiveSupport`, không gọi `sparkContext`).
   - File: `notebooks/00_config.py`
   - Kiểm chứng: `python -c "exec(open('notebooks/00_config.py').read()); print(tbl('silver','orders'), spark.version)"` in `silver.orders 4.0.1`.
