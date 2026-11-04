@@ -42,7 +42,7 @@ Task 2–11, 16–18, 19–28, 29–32 không song song được vì cùng sửa
 
 ### Giai đoạn 1: Generator
 
-- [ ] **2. Khung CLI và `stores.csv`**
+- [x] **2. Khung CLI và `stores.csv`**
   - Việc: tham số `--seed` (mặc định 42), `--out` (mặc định `data`, ghi vào `<out>/raw` và `<out>/_expected`); sinh 10 cửa hàng sạch ở 3 thành phố.
   - File: `data_generator/generate_data.py`, `data/raw/stores.csv`
   - Kiểm chứng: `python data_generator/generate_data.py && wc -l data/raw/stores.csv` ra 11 dòng.
