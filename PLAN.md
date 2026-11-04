@@ -140,12 +140,12 @@ Mỗi bước xử lý một cell.
   - File: `notebooks/03_silver.py`
   - Kiểm chứng: `python local/run_local.py --clean --until 03 && python local/check_layer.py silver.stores`.
 
-- [ ] **20. `silver.customers`**
+- [x] **20. `silver.customers`**
   - Việc: chuẩn hóa E05, lấy bản mới nhất theo `customer_id`, MERGE SCD Type 1. Tiêu chí phụ khi trùng `_ingested_at`: `_source_file` giảm dần.
   - File: `notebooks/03_silver.py`
   - Kiểm chứng: như task 19 với `silver.customers`.
 
-- [ ] **21. `silver.products`**
+- [x] **21. `silver.products`**
   - Việc: chuẩn hóa `category` (E06), làm phẳng `price.amount` thành `unit_list_price`, MERGE.
   - File: `notebooks/03_silver.py`
   - Kiểm chứng: như task 19 với `silver.products`.

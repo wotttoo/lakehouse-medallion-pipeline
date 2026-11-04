@@ -139,3 +139,61 @@ assert stores.filter("city IS NULL").count() == 0, "Co ten thanh pho chua co tro
 
 stores = drop_technical(latest_per_key(stores, ["store_id"]))
 merge_into(stores, "stores", ["store_id"])
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ## `silver.customers` (SCD Type 1)
+# MAGIC
+# MAGIC `bronze.customers` chứa cả file gốc và file cập nhật tháng 12. Một khách có thể xuất hiện 2 lần.
+# MAGIC SCD Type 1 nghĩa là **ghi đè** thông tin cũ bằng thông tin mới nhất, không giữ lịch sử.
+# MAGIC Ta lấy bản mới nhất theo `customer_id` (theo `_ingested_at`, rồi `_source_file`), sau đó MERGE.
+
+# COMMAND ----------
+
+customers = trim_strings(to_snake_case(spark.table(tbl("bronze", "customers"))))
+
+# COMMAND ----------
+
+customers = (
+    customers
+    .withColumn("email", F.lower("email"))
+    .withColumn("city", normalize_city(F.col("city")))
+    .withColumn("signup_date", F.to_date("signup_date", "yyyy-MM-dd"))
+)
+assert customers.filter("city IS NULL").count() == 0, "Co ten thanh pho chua co trong CITY_MAP"
+
+# COMMAND ----------
+
+customers = drop_technical(latest_per_key(customers, ["customer_id"]))
+merge_into(customers, "customers", ["customer_id"])
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ## `silver.products`
+# MAGIC
+# MAGIC - Chuẩn hóa `category` (E06): `trim`, rồi viết hoa chữ cái đầu mỗi từ (`initcap`), ví dụ `"  sữa "` → `"Sữa"`.
+# MAGIC - Làm phẳng cột lồng `price`: `price.amount` → `unit_list_price`, `price.currency` → `currency`.
+
+# COMMAND ----------
+
+products = trim_strings(to_snake_case(spark.table(tbl("bronze", "products"))))
+
+# COMMAND ----------
+
+products = products.withColumn("category", F.initcap(F.lower(F.trim("category"))))
+
+# COMMAND ----------
+
+products = (
+    products
+    .withColumn("unit_list_price", F.col("price.amount").cast("bigint"))
+    .withColumn("currency", F.col("price.currency"))
+    .drop("price")
+)
+
+# COMMAND ----------
+
+products = drop_technical(latest_per_key(products, ["product_id"]))
+merge_into(products, "products", ["product_id"])
