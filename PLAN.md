@@ -72,7 +72,7 @@ Task 2–11, 16–18, 19–28, 29–32 không song song được vì cùng sửa
   - File: `data_generator/generate_data.py`, `data/raw/orders_2025_MM.csv`
   - Kiểm chứng: với `data/raw/orders_2025_03.csv`, `cut -d, -f1 | sort | uniq -d | wc -l` lớn hơn 0; `cut -d, -f2 | grep -cE '^[0-9]{2}/'` lớn hơn 0; `awk -F, 'NR>1 && $3==""' | wc -l` lớn hơn 0.
 
-- [ ] **8. Cài lỗi E04, E07, E08, E09**
+- [x] **8. Cài lỗi E04, E07, E08, E09**
   - Việc: `unit_price` dạng `"25.000"`; `quantity <= 0`; `product_id` không tồn tại; `order_date` năm 2027. Mỗi dòng chỉ mang một lỗi để `reject_reason` và đáp án không mơ hồ.
   - File: `data_generator/generate_data.py`, `data/raw/orders_2025_MM.csv`, `data/raw/order_items_2025_MM.csv`
   - Kiểm chứng: `cat data/raw/orders_2025_*.csv | cut -d, -f2 | grep -c 2027` lớn hơn 0; `cat data/raw/order_items_2025_*.csv | awk -F, '$4<=0 && NR>1' | wc -l` lớn hơn 0.

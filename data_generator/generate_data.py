@@ -176,6 +176,51 @@ def inject_e03(rng, orders):
     return len(picked)
 
 
+E09_RATE = 0.005  # don co order_date nam 2027
+E07_RATE = 0.01   # quantity <= 0
+E08_RATE = 0.008  # product_id khong ton tai
+E04_RATE = 0.03   # unit_price dang "25.000"
+
+
+def inject_e09(rng, orders):
+    pool = [o for o in free_orders(orders) if o["customer_id"] != ""]
+    picked = rng.sample(pool, round(len(orders) * E09_RATE))
+    for o in picked:
+        o["_err"] = "E09"
+        o["order_date_raw"] = o["order_date"].replace(year=2027).isoformat()
+    return len(picked)
+
+
+def free_items(orders):
+    # chi cai loi dong hang vao don khong bi E09 va dong chua co loi
+    return [it for o in orders if o.get("_err") != "E09"
+            for it in o["items"] if "_err" not in it]
+
+
+def inject_e07(rng, orders, n_items):
+    picked = rng.sample(free_items(orders), round(n_items * E07_RATE))
+    for it in picked:
+        it["_err"] = "E07"
+        it["quantity_raw"] = rng.choice([0, 0, -1, -2])
+    return len(picked)
+
+
+def inject_e08(rng, orders, n_items):
+    picked = rng.sample(free_items(orders), round(n_items * E08_RATE))
+    for it in picked:
+        it["_err"] = "E08"
+        it["product_id"] = f"P9{rng.randrange(1, 100):02d}"  # P901..P999 khong ton tai
+    return len(picked)
+
+
+def inject_e04(rng, orders, n_items):
+    picked = rng.sample(free_items(orders), round(n_items * E04_RATE))
+    for it in picked:
+        it["_err"] = "E04"
+        it["unit_price_raw"] = f"{it['unit_price']:,}".replace(",", ".")
+    return len(picked)
+
+
 def count_e10(orders):
     # khach vang lai da sinh san trong du lieu sach, o day chi dem
     return sum(1 for o in orders if o["customer_id"] == "")
@@ -372,6 +417,11 @@ def main():
     errors["E06"] = inject_e06(rng, products)
     errors["E02"] = inject_e02(rng, orders)
     errors["E03"] = inject_e03(rng, orders)
+    errors["E09"] = inject_e09(rng, orders)
+    n_items = sum(len(o["items"]) for o in orders)
+    errors["E07"] = inject_e07(rng, orders, n_items)
+    errors["E08"] = inject_e08(rng, orders, n_items)
+    errors["E04"] = inject_e04(rng, orders, n_items)
     errors["E10"] = count_e10(orders)
 
     # 3. Ghi file nguon
