@@ -224,7 +224,7 @@ Mỗi bước xử lý một cell.
   - File: `notebooks/06_validation.py`
   - Kiểm chứng: `python local/run_local.py --clean` exit code 0.
 
-- [ ] **36. `06_validation`: demo time travel** (nhóm B, luồng 2, sau 35)
+- [x] **36. `06_validation`: demo time travel** (nhóm B, luồng 2, sau 35)
   - Việc: `DESCRIBE HISTORY`, cố tình xóa một tháng, đọc `VERSION AS OF`, `RESTORE`, `assert` số dòng trở lại đúng.
   - File: `notebooks/06_validation.py`
   - Kiểm chứng: `python local/run_local.py --clean` exit code 0.
