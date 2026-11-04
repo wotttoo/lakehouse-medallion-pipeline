@@ -32,6 +32,79 @@ STORES = [
 ]
 
 
+HO = ["Nguyễn", "Trần", "Lê", "Phạm", "Hoàng", "Huỳnh", "Phan", "Vũ", "Võ",
+      "Đặng", "Bùi", "Đỗ", "Hồ", "Ngô", "Dương", "Lý"]
+TEN_DEM = ["Văn", "Thị", "Minh", "Thu", "Ngọc", "Đức", "Quang", "Thanh",
+           "Hoài", "Gia", "Bảo", "Khánh", "Anh", "Hữu", "Phương"]
+TEN = ["An", "Bình", "Châu", "Dũng", "Giang", "Hà", "Hải", "Hạnh", "Hiếu",
+       "Hoa", "Hùng", "Hương", "Khoa", "Lan", "Linh", "Long", "Mai", "Nam",
+       "Nga", "Nhung", "Phong", "Phúc", "Quân", "Quỳnh", "Sơn", "Tâm",
+       "Thảo", "Trang", "Trung", "Tú", "Tuấn", "Uyên", "Vân", "Vy", "Yến"]
+
+# Bo dau tieng Viet de tao email ascii
+_VN = "àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ"
+_AS = "aaaaaaaaaaaaaaaaaeeeeeeeeeeeiiiiiooooooooooooooooouuuuuuuuuuuyyyyyd"
+_ASCII = str.maketrans(_VN + _VN.upper(), _AS + _AS.upper())
+
+CUSTOMER_CITY_WEIGHTS = [(HN, 0.40), (HCM, 0.45), (DN, 0.15)]
+N_CUSTOMERS = 2000
+N_UPDATE_CHANGED = 100
+N_UPDATE_NEW = 50
+CUSTOMER_HEADER = ["customer_id", "full_name", "email", "phone", "city", "signup_date"]
+
+
+def pick_weighted(rng, pairs):
+    values = [v for v, _ in pairs]
+    weights = [w for _, w in pairs]
+    return rng.choices(values, weights=weights, k=1)[0]
+
+
+def random_phone(rng):
+    return rng.choice(["090", "091", "093", "097", "098", "086"]) + f"{rng.randrange(10**7):07d}"
+
+
+def random_date(rng, start, end):
+    return start + timedelta(days=rng.randrange((end - start).days + 1))
+
+
+def make_customer(rng, idx, signup_start, signup_end):
+    name = f"{rng.choice(HO)} {rng.choice(TEN_DEM)} {rng.choice(TEN)}"
+    slug = ".".join(name.translate(_ASCII).lower().split()[-2:])
+    return {
+        "customer_id": f"C{idx:05d}",
+        "full_name": name,
+        "email": f"{slug}{idx}@example.com",
+        "phone": random_phone(rng),
+        "city": pick_weighted(rng, CUSTOMER_CITY_WEIGHTS),
+        "signup_date": random_date(rng, signup_start, signup_end).isoformat(),
+    }
+
+
+def gen_customers(rng):
+    base = [
+        make_customer(rng, i, date(2022, 1, 1), date(2024, 12, 31))
+        for i in range(1, N_CUSTOMERS + 1)
+    ]
+    # Ban cap nhat thang 12: khach cu doi city/phone + khach moi
+    changed_ids = sorted(rng.sample(range(N_CUSTOMERS), N_UPDATE_CHANGED))
+    update = []
+    for i in changed_ids:
+        c = dict(base[i])
+        kind = rng.choice(["city", "phone", "both"])
+        if kind in ("city", "both"):
+            c["city"] = rng.choice([x for x, _ in CUSTOMER_CITY_WEIGHTS if x != c["city"]])
+        if kind in ("phone", "both"):
+            c["phone"] = random_phone(rng)
+        update.append(c)
+    for i in range(N_CUSTOMERS + 1, N_CUSTOMERS + N_UPDATE_NEW + 1):
+        update.append(make_customer(rng, i, date(2025, 12, 1), date(2025, 12, 31)))
+    return base, update
+
+
+def customer_rows(customers):
+    return [[c[k] for k in CUSTOMER_HEADER] for c in customers]
+
+
 def write_csv(path, header, rows):
     # lineterminator co dinh de output tat dinh tren moi he dieu hanh
     with open(path, "w", encoding="utf-8", newline="") as f:
@@ -65,6 +138,11 @@ def main():
         ["store_id", "store_name", "city", "opened_date"],
         [[s["store_id"], s["store_name"], s["city"], s["opened_date"]] for s in stores],
     )
+
+    customers, customers_update = gen_customers(rng)
+    write_csv(raw_dir / "customers.csv", CUSTOMER_HEADER, customer_rows(customers))
+    write_csv(raw_dir / "customers_update_2025_12.csv", CUSTOMER_HEADER,
+              customer_rows(customers_update))
     print(f"Da ghi du lieu vao {raw_dir}")
 
 

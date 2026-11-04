@@ -47,7 +47,7 @@ Task 2–11, 16–18, 19–28, 29–32 không song song được vì cùng sửa
   - File: `data_generator/generate_data.py`, `data/raw/stores.csv`
   - Kiểm chứng: `python data_generator/generate_data.py && wc -l data/raw/stores.csv` ra 11 dòng.
 
-- [ ] **3. Sinh customers**
+- [x] **3. Sinh customers**
   - Việc: `customers.csv` (~2.000 khách), `customers_update_2025_12.csv` (~100 khách cũ đổi city/phone, ~50 khách mới). Tên tiếng Việt hư cấu.
   - File: `data_generator/generate_data.py`, `data/raw/customers.csv`, `data/raw/customers_update_2025_12.csv`
   - Kiểm chứng: `wc -l data/raw/customers*.csv` ra khoảng 2.001 và 151 dòng.
