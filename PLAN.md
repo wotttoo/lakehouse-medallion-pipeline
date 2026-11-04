@@ -219,7 +219,7 @@ Mỗi bước xử lý một cell.
   - File: `notebooks/05_serving.py`, `sql/business_questions.sql`
   - Kiểm chứng: `python local/run_local.py --clean --until 05` exit code 0 và in đủ 5 kết quả.
 
-- [ ] **35. `06_validation`: đối chiếu đáp án** (nhóm B, luồng 2)
+- [x] **35. `06_validation`: đối chiếu đáp án** (nhóm B, luồng 2)
   - Việc: so mọi bảng với `tables`, kiểm tra `business`, in bảng so sánh, `assert` khi lệch. Trên Databricks đọc file đáp án từ Volume.
   - File: `notebooks/06_validation.py`
   - Kiểm chứng: `python local/run_local.py --clean` exit code 0.
