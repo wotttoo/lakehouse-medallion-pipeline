@@ -221,6 +221,83 @@ def inject_e04(rng, orders, n_items):
     return len(picked)
 
 
+def compute_expected(errors, stores, customers, customers_update, products, orders):
+    """Tinh dap an truc tiep tu du lieu trong bo nho (khong chay pipeline)."""
+    store_city = {s["store_id"]: s["city"] for s in stores}
+    category = {p["product_id"]: p["category"] for p in products}
+    june = [o for o in orders if o["month"] == 6]
+
+    valid_orders = [o for o in orders if o.get("_err") != "E09"]
+    valid_items = [(o, it) for o in valid_orders for it in o["items"]
+                   if it.get("_err") not in ("E07", "E08")]
+    n_items = sum(len(o["items"]) for o in orders)
+
+    # Khach hang sau SCD Type 1: ban cap nhat de len ban goc
+    final_customers = {c["customer_id"]: c for c in customers}
+    final_customers.update({c["customer_id"]: c for c in customers_update})
+
+    tables = {
+        "bronze.stores": len(stores),
+        "bronze.customers": len(customers) + len(customers_update),
+        "bronze.products": len(products),
+        "bronze.orders": sum(o.get("_copies", 1) for o in orders)
+                         + sum(o.get("_copies", 1) for o in june),
+        "bronze.order_items": n_items + sum(len(o["items"]) for o in june),
+        "silver.stores": len(stores),
+        "silver.customers": len(final_customers),
+        "silver.products": len(products),
+        "silver.orders": len(valid_orders),
+        "silver.orders_rejected": len(orders) - len(valid_orders),
+        "silver.order_items": len(valid_items),
+        "silver.order_items_rejected": n_items - len(valid_items),
+        "gold.dim_date": (date(YEAR, 12, 31) - date(YEAR, 1, 1)).days + 1,
+        "gold.dim_customer": len(final_customers) + 1,  # + khach vang lai
+        "gold.dim_product": len(products),
+        "gold.dim_store": len(stores),
+        "gold.fact_sales": len(valid_items),
+        "gold.agg_monthly_store_revenue": len({(o["month"], o["store_id"]) for o, _ in valid_items}),
+        "gold.agg_category_city_revenue": len({(category[it["product_id"]], store_city[o["store_id"]])
+                                               for o, it in valid_items}),
+    }
+
+    # Gia tri nghiep vu
+    revenue_by_order, revenue_by_city, revenue_by_product = {}, {}, {}
+    for o, it in valid_items:
+        r = it["quantity"] * it["unit_price"] - it["discount"]
+        revenue_by_order[o["order_id"]] = revenue_by_order.get(o["order_id"], 0) + r
+        city = store_city[o["store_id"]]
+        revenue_by_city[city] = revenue_by_city.get(city, 0) + r
+        revenue_by_product[it["product_id"]] = revenue_by_product.get(it["product_id"], 0) + r
+    order_customer = {o["order_id"]: o["customer_id"] for o, _ in valid_items}
+    orders_per_customer = {}
+    for cid in order_customer.values():
+        if cid != "":
+            orders_per_customer[cid] = orders_per_customer.get(cid, 0) + 1
+    returning = sum(1 for n in orders_per_customer.values() if n >= 2)
+    total_revenue = sum(revenue_by_order.values())
+    customers_by_city = {}
+    for c in final_customers.values():
+        customers_by_city[c["city"]] = customers_by_city.get(c["city"], 0) + 1
+
+    business = {
+        "total_revenue": total_revenue,
+        "total_orders": len(revenue_by_order),
+        "guest_orders": sum(1 for cid in order_customer.values() if cid == ""),
+        "customers_with_orders": len(orders_per_customer),
+        "returning_customers": returning,
+        "returning_rate": round(returning / len(orders_per_customer), 4),
+        "aov": round(total_revenue / len(revenue_by_order), 2),
+        "top_product_id": max(sorted(revenue_by_product), key=lambda p: revenue_by_product[p]),
+        "revenue_by_city": dict(sorted(revenue_by_city.items())),
+        "silver_customers_by_city": dict(sorted(customers_by_city.items())),
+    }
+    return {
+        "errors": {k: errors[k] for k in sorted(errors)},
+        "tables": tables,
+        "business": business,
+    }
+
+
 def count_e10(orders):
     # khach vang lai da sinh san trong du lieu sach, o day chi dem
     return sum(1 for o in orders if o["customer_id"] == "")
@@ -312,7 +389,7 @@ def gen_orders(rng, customers, products):
     store_ids = [s[0] for s in STORES]
     store_w = [s[4] for s in STORES]
     cust_ids = [c["customer_id"] for c in customers]
-    cust_w = [rng.expovariate(1.0) for _ in cust_ids]  # co khach mua nhieu, khach mua it
+    cust_w = [rng.expovariate(1.0) ** 2 for _ in cust_ids]  # co khach mua nhieu, khach mua it
     prod_ids = [p["product_id"] for p in products]
     prod_w = [p["_weight"] for p in products]
     price = {p["product_id"]: p["price"]["amount"] for p in products}
@@ -456,8 +533,14 @@ def main():
         dst.write_bytes(src.read_bytes())
         e01[prefix] = count_data_lines(dst)
     errors["E01"] = e01
-    print(f"Da ghi du lieu vao {raw_dir}")
-    print("So loi da cai:", errors)
+
+    # 4. Dap an doc lap
+    expected = compute_expected(errors, stores, customers, customers_update, products, orders)
+    with open(exp_dir / "expected_counts.json", "w", encoding="utf-8", newline="\n") as f:
+        json.dump(expected, f, ensure_ascii=False, indent=2)
+        f.write("\n")
+    print(f"Da ghi du lieu vao {raw_dir} va {exp_dir}")
+    print("So loi da cai:", expected["errors"])
 
 
 if __name__ == "__main__":

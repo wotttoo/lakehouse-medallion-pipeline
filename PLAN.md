@@ -82,7 +82,7 @@ Task 2–11, 16–18, 19–28, 29–32 không song song được vì cùng sửa
   - File: `data_generator/generate_data.py`, `data/raw/orders_2025_06_resend.csv`, `data/raw/order_items_2025_06_resend.csv`
   - Kiểm chứng: `cmp data/raw/orders_2025_06.csv data/raw/orders_2025_06_resend.csv` và `cmp data/raw/order_items_2025_06.csv data/raw/order_items_2025_06_resend.csv` không báo khác.
 
-- [ ] **10. Ghi `expected_counts.json`**
+- [x] **10. Ghi `expected_counts.json`**
   - Việc: tính từ dữ liệu sạch gốc, không chạy pipeline. Cấu trúc gồm 3 khóa: `errors` (E01–E10), `tables` (`"bronze.orders": n`, ... cho mọi bảng), `business` (tổng doanh thu, số khách quay lại).
   - File: `data_generator/generate_data.py`, `data/_expected/expected_counts.json`
   - Kiểm chứng: `python -c "import json; d=json.load(open('data/_expected/expected_counts.json')); assert set(d)=={'errors','tables','business'}; assert len(d['errors'])==10; print(len(d['tables']))"` in 19 (5 Bronze, 7 Silver, 7 Gold).
