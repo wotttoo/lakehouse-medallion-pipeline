@@ -46,16 +46,32 @@ def read_csv(pattern):
 # COMMAND ----------
 
 # MAGIC %md
-# MAGIC ## Hàm ghi vào bảng Bronze
+# MAGIC ## Hàm ghi vào bảng Bronze, idempotent theo file
 # MAGIC
-# MAGIC Ghi bằng Delta Lake, chế độ `append`.
+# MAGIC Nếu chạy notebook hai lần mà cứ `append`, dữ liệu sẽ bị nhân đôi. Cách xử lý:
+# MAGIC 1. Lấy danh sách `_source_file` đã có trong bảng đích.
+# MAGIC 2. Bỏ các dòng đến từ những file đó (`left_anti` join), chỉ giữ dòng của **file chưa nạp**.
+# MAGIC 3. Ghi Delta Lake chế độ `append`.
+# MAGIC
+# MAGIC Chạy lại lần 2 sẽ không thêm dòng nào. File giao lại có tên khác (`_resend`) nên vẫn được nạp.
 
 # COMMAND ----------
 
 def write_bronze(df, table):
     target = tbl("bronze", table)
-    df.write.format("delta").mode("append").saveAsTable(target)
-    print(f"{target}: tong {spark.table(target).count()} dong")
+    if table_exists(target):
+        loaded_files = spark.table(target).select("_source_file").distinct()
+        df = df.join(loaded_files, on="_source_file", how="left_anti")
+
+    new_files = [r["_source_file"] for r in df.select("_source_file").distinct().collect()]
+    if not new_files:
+        print(f"{target}: khong co file moi, bo qua")
+        return
+
+    # dua 2 cot ky thuat ve cuoi cho de doc
+    cols = [c for c in df.columns if not c.startswith("_")] + ["_ingested_at", "_source_file"]
+    df.select(cols).write.format("delta").mode("append").saveAsTable(target)
+    print(f"{target}: nap {len(new_files)} file moi, tong {spark.table(target).count()} dong")
 
 # COMMAND ----------
 

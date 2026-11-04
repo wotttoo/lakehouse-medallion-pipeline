@@ -126,7 +126,7 @@ Task 2–11, 16–18, 19–28, 29–32 không song song được vì cùng sửa
   - File: `notebooks/02_bronze.py`
   - Kiểm chứng: `python local/run_local.py --clean --until 02 && python local/check_layer.py bronze`.
 
-- [ ] **18. Idempotent theo file**
+- [x] **18. Idempotent theo file**
   - Việc: lấy danh sách `_source_file` đã nạp, chỉ nạp file mới.
   - File: `notebooks/02_bronze.py`
   - Kiểm chứng: `python local/run_local.py --clean --until 02 --twice && python local/check_layer.py bronze`.
