@@ -135,7 +135,7 @@ Task 2–11, 16–18, 19–28, 29–32 không song song được vì cùng sửa
 
 Mỗi bước xử lý một cell.
 
-- [ ] **19. `silver.stores`**
+- [x] **19. `silver.stores`**
   - Việc: snake_case, ép kiểu, chuẩn hóa thành phố (E05), MERGE.
   - File: `notebooks/03_silver.py`
   - Kiểm chứng: `python local/run_local.py --clean --until 03 && python local/check_layer.py silver.stores`.
