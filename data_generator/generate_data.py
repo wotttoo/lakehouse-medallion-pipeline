@@ -102,7 +102,49 @@ def gen_customers(rng):
 
 
 def customer_rows(customers):
-    return [[c[k] for k in CUSTOMER_HEADER] for c in customers]
+    # ghi gia tri tho (co loi) neu co, nguoc lai ghi gia tri sach
+    return [[c.get(k + "_raw", c[k]) for k in CUSTOMER_HEADER] for c in customers]
+
+
+# ---------------- Cai loi ----------------
+
+# E05: cac cach viet khac cua ten thanh pho
+CITY_VARIANTS = {
+    HN: ["HN", "Ha Noi", "hà nội", "Hà Nội ", "ha noi"],
+    HCM: ["HCM", "Sài Gòn", "TP HCM", "tp.hcm", "Hồ Chí Minh"],
+    DN: ["Da Nang", "đà nẵng", "DN", " Đà Nẵng"],
+}
+STORE_CITY_ERRORS = 4        # so cua hang bi viet sai
+CUSTOMER_CITY_ERROR_RATE = 0.03
+PRODUCT_CATEGORY_ERRORS = 12  # E06
+
+
+def inject_e05(rng, stores, customers, customers_update):
+    count = 0
+    for s in sorted(rng.sample(stores, STORE_CITY_ERRORS), key=lambda x: x["store_id"]):
+        s["city_raw"] = rng.choice(CITY_VARIANTS[s["city"]])
+        count += 1
+    for c in customers + customers_update:
+        if rng.random() < CUSTOMER_CITY_ERROR_RATE:
+            c["city_raw"] = rng.choice(CITY_VARIANTS[c["city"]])
+            count += 1
+    return count
+
+
+def inject_e06(rng, products):
+    variants = [
+        lambda c: " " + c,
+        lambda c: c + "  ",
+        lambda c: c.upper(),
+        lambda c: c.lower(),
+        lambda c: "  " + c.lower() + " ",
+    ]
+    picked = sorted(rng.sample(range(len(products)), PRODUCT_CATEGORY_ERRORS))
+    for n, i in enumerate(picked):
+        # bien the dau tien luon co khoang trang dau dong de de kiem tra
+        f = variants[0] if n == 0 else rng.choice(variants)
+        products[i]["category_raw"] = f(products[i]["category"])
+    return len(picked)
 
 
 # Danh muc chuan -> (mat hang mau, khoang gia VND)
@@ -282,27 +324,38 @@ def main():
     raw_dir.mkdir(parents=True, exist_ok=True)
     exp_dir.mkdir(parents=True, exist_ok=True)
 
+    # 1. Sinh du lieu sach
     stores = gen_stores(rng)
-    write_csv(
-        raw_dir / "stores.csv",
-        ["store_id", "store_name", "city", "opened_date"],
-        [[s["store_id"], s["store_name"], s["city"], s["opened_date"]] for s in stores],
-    )
-
     customers, customers_update = gen_customers(rng)
-    write_csv(raw_dir / "customers.csv", CUSTOMER_HEADER, customer_rows(customers))
-    write_csv(raw_dir / "customers_update_2025_12.csv", CUSTOMER_HEADER,
-              customer_rows(customers_update))
-
     products = gen_products(rng)
-    write_jsonl(raw_dir / "products.jsonl",
-                [{k: v for k, v in p.items() if not k.startswith("_")} for p in products])
-
     orders = gen_orders(rng, customers, products)
     for o in orders:
         o["month"] = o["order_date"].month  # file thang theo ngay goc
+
+    # 2. Cai loi co chu dich
+    errors = {}
+    errors["E05"] = inject_e05(rng, stores, customers, customers_update)
+    errors["E06"] = inject_e06(rng, products)
+
+    # 3. Ghi file nguon
+    write_csv(
+        raw_dir / "stores.csv",
+        ["store_id", "store_name", "city", "opened_date"],
+        [[s["store_id"], s["store_name"], s.get("city_raw", s["city"]), s["opened_date"]]
+         for s in stores],
+    )
+    write_csv(raw_dir / "customers.csv", CUSTOMER_HEADER, customer_rows(customers))
+    write_csv(raw_dir / "customers_update_2025_12.csv", CUSTOMER_HEADER,
+              customer_rows(customers_update))
+    write_jsonl(raw_dir / "products.jsonl", [
+        {"product_id": p["product_id"], "product_name": p["product_name"],
+         "category": p.get("category_raw", p["category"]), "price": p["price"],
+         "is_active": p["is_active"]}
+        for p in products
+    ])
     write_month_files(raw_dir, orders)
     print(f"Da ghi du lieu vao {raw_dir}")
+    print("So loi da cai:", errors)
 
 
 if __name__ == "__main__":

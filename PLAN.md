@@ -62,7 +62,7 @@ Task 2–11, 16–18, 19–28, 29–32 không song song được vì cùng sửa
   - File: `data_generator/generate_data.py`, `data/raw/orders_2025_MM.csv`, `data/raw/order_items_2025_MM.csv`
   - Kiểm chứng: `ls data/raw/orders_2025_*.csv | wc -l` ra 12; `cat data/raw/order_items_2025_*.csv | wc -l` ra khoảng 50.000.
 
-- [ ] **6. Cài lỗi E05, E06**
+- [x] **6. Cài lỗi E05, E06**
   - Việc: nhiều cách viết tên thành phố trong stores, customers; `category` thừa khoảng trắng và lẫn hoa thường.
   - File: `data_generator/generate_data.py`, `data/raw/stores.csv`, `data/raw/customers*.csv`, `data/raw/products.jsonl`
   - Kiểm chứng: `grep -cE 'HN|Ha Noi|Sài Gòn|HCM|Da Nang' data/raw/customers.csv` lớn hơn 0; `grep -c '"category": " ' data/raw/products.jsonl` lớn hơn 0.

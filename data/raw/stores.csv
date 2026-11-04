@@ -1,11 +1,11 @@
 store_id,store_name,city,opened_date
-S01,MiniMart Hoàn Kiếm,Hà Nội,2019-03-15
+S01,MiniMart Hoàn Kiếm,hà nội,2019-03-15
 S02,MiniMart Cầu Giấy,Hà Nội,2020-07-01
 S03,MiniMart Hà Đông,Hà Nội,2021-05-20
 S04,MiniMart Long Biên,Hà Nội,2022-09-10
 S05,MiniMart Quận 1,TP.HCM,2018-11-11
 S06,MiniMart Quận 3,TP.HCM,2019-08-08
-S07,MiniMart Bình Thạnh,TP.HCM,2020-12-12
-S08,MiniMart Thủ Đức,TP.HCM,2023-02-14
-S09,MiniMart Hải Châu,Đà Nẵng,2021-04-30
+S07,MiniMart Bình Thạnh,HCM,2020-12-12
+S08,MiniMart Thủ Đức,Sài Gòn,2023-02-14
+S09,MiniMart Hải Châu,Da Nang,2021-04-30
 S10,MiniMart Sơn Trà,Đà Nẵng,2023-06-01

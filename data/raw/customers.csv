@@ -7,7 +7,7 @@ C00005,Phan Anh Phúc,anh.phuc5@example.com,0901556017,Hà Nội,2024-01-06
 C00006,Đỗ Gia Mai,gia.mai6@example.com,0907707870,TP.HCM,2024-02-15
 C00007,Lê Hoài Nga,hoai.nga7@example.com,0866067228,TP.HCM,2022-05-23
 C00008,Trần Bảo Linh,bao.linh8@example.com,0931338687,Đà Nẵng,2022-07-26
-C00009,Hồ Ngọc Tú,ngoc.tu9@example.com,0866120868,Hà Nội,2023-12-29
+C00009,Hồ Ngọc Tú,ngoc.tu9@example.com,0866120868,hà nội,2023-12-29
 C00010,Phan Bảo Nam,bao.nam10@example.com,0861197935,TP.HCM,2022-12-17
 C00011,Vũ Minh Tú,minh.tu11@example.com,0974528972,Đà Nẵng,2023-03-26
 C00012,Bùi Hữu Dũng,huu.dung12@example.com,0910538552,TP.HCM,2024-04-01
@@ -29,7 +29,7 @@ C00027,Bùi Văn Linh,van.linh27@example.com,0983694634,Hà Nội,2022-05-01
 C00028,Vũ Thị Châu,thi.chau28@example.com,0931188789,TP.HCM,2023-07-25
 C00029,Lý Thu Yến,thu.yen29@example.com,0919580513,TP.HCM,2023-05-13
 C00030,Lý Anh Thảo,anh.thao30@example.com,0911582524,Hà Nội,2024-06-01
-C00031,Đỗ Quang Thảo,quang.thao31@example.com,0970908841,TP.HCM,2022-07-21
+C00031,Đỗ Quang Thảo,quang.thao31@example.com,0970908841,TP HCM,2022-07-21
 C00032,Trần Quang Phúc,quang.phuc32@example.com,0904171761,Hà Nội,2024-07-07
 C00033,Hoàng Quang Hương,quang.huong33@example.com,0937761611,Hà Nội,2022-06-04
 C00034,Dương Anh Hải,anh.hai34@example.com,0909069560,TP.HCM,2022-07-11
@@ -55,7 +55,7 @@ C00053,Đỗ Thu Long,thu.long53@example.com,0861724590,Hà Nội,2024-04-12
 C00054,Hoàng Phương Long,phuong.long54@example.com,0912970445,Đà Nẵng,2022-02-20
 C00055,Huỳnh Khánh Phúc,khanh.phuc55@example.com,0974163555,Hà Nội,2022-08-10
 C00056,Hồ Hữu Châu,huu.chau56@example.com,0973731818,Hà Nội,2024-07-31
-C00057,Đỗ Ngọc Linh,ngoc.linh57@example.com,0910397023,TP.HCM,2024-03-27
+C00057,Đỗ Ngọc Linh,ngoc.linh57@example.com,0910397023,Hồ Chí Minh,2024-03-27
 C00058,Bùi Ngọc Giang,ngoc.giang58@example.com,0935891254,TP.HCM,2024-03-29
 C00059,Bùi Văn Hạnh,van.hanh59@example.com,0932995870,TP.HCM,2023-06-28
 C00060,Trần Thị Trang,thi.trang60@example.com,0935262632,TP.HCM,2024-11-13
@@ -70,7 +70,7 @@ C00068,Đặng Thu Khoa,thu.khoa68@example.com,0910409790,Hà Nội,2024-08-31
 C00069,Lê Thanh Thảo,thanh.thao69@example.com,0869658155,Hà Nội,2024-02-26
 C00070,Lý Quang Long,quang.long70@example.com,0910093026,Đà Nẵng,2022-08-07
 C00071,Ngô Thu Hương,thu.huong71@example.com,0868689889,TP.HCM,2023-05-26
-C00072,Phạm Thanh Hiếu,thanh.hieu72@example.com,0978910914,Đà Nẵng,2023-10-12
+C00072,Phạm Thanh Hiếu,thanh.hieu72@example.com,0978910914,đà nẵng,2023-10-12
 C00073,Dương Gia Vân,gia.van73@example.com,0979191766,TP.HCM,2022-11-22
 C00074,Lý Thanh Mai,thanh.mai74@example.com,0914652512,TP.HCM,2024-12-03
 C00075,Lý Bảo Long,bao.long75@example.com,0937379837,Hà Nội,2023-08-09
@@ -98,8 +98,8 @@ C00096,Lý Thanh Trang,thanh.trang96@example.com,0869940074,Hà Nội,2023-05-18
 C00097,Lê Ngọc Trung,ngoc.trung97@example.com,0917796514,TP.HCM,2024-02-16
 C00098,Bùi Văn Uyên,van.uyen98@example.com,0933050766,TP.HCM,2023-12-28
 C00099,Võ Đức Nam,duc.nam99@example.com,0984635017,TP.HCM,2024-11-24
-C00100,Phan Thị Long,thi.long100@example.com,0866818732,TP.HCM,2023-05-08
-C00101,Lý Bảo Uyên,bao.uyen101@example.com,0970289293,Hà Nội,2023-03-30
+C00100,Phan Thị Long,thi.long100@example.com,0866818732,Hồ Chí Minh,2023-05-08
+C00101,Lý Bảo Uyên,bao.uyen101@example.com,0970289293,Hà Nội ,2023-03-30
 C00102,Hồ Khánh Long,khanh.long102@example.com,0939756883,Hà Nội,2024-12-23
 C00103,Đỗ Quang Phúc,quang.phuc103@example.com,0937612582,Hà Nội,2023-05-30
 C00104,Vũ Thị Khoa,thi.khoa104@example.com,0932005795,TP.HCM,2023-01-15
@@ -183,18 +183,18 @@ C00181,Bùi Quang Vy,quang.vy181@example.com,0937612081,TP.HCM,2024-05-31
 C00182,Phạm Anh Hạnh,anh.hanh182@example.com,0869249870,TP.HCM,2023-03-17
 C00183,Ngô Thanh Linh,thanh.linh183@example.com,0975686328,TP.HCM,2024-03-27
 C00184,Ngô Khánh Hải,khanh.hai184@example.com,0937159911,Hà Nội,2023-06-07
-C00185,Đỗ Minh Tuấn,minh.tuan185@example.com,0901530497,TP.HCM,2022-07-10
+C00185,Đỗ Minh Tuấn,minh.tuan185@example.com,0901530497,tp.hcm,2022-07-10
 C00186,Ngô Thị Quỳnh,thi.quynh186@example.com,0919334352,Hà Nội,2023-11-07
 C00187,Phạm Quang Quân,quang.quan187@example.com,0867095702,Đà Nẵng,2022-04-16
 C00188,Đặng Gia Nhung,gia.nhung188@example.com,0931738129,TP.HCM,2023-03-12
-C00189,Hoàng Bảo Tuấn,bao.tuan189@example.com,0911815603,Hà Nội,2024-01-23
+C00189,Hoàng Bảo Tuấn,bao.tuan189@example.com,0911815603,hà nội,2024-01-23
 C00190,Phạm Anh Nam,anh.nam190@example.com,0983794319,TP.HCM,2022-02-23
 C00191,Võ Văn Hương,van.huong191@example.com,0935183902,Đà Nẵng,2023-12-20
 C00192,Nguyễn Minh Hoa,minh.hoa192@example.com,0986724045,Hà Nội,2022-03-04
 C00193,Lê Khánh Vy,khanh.vy193@example.com,0916311494,TP.HCM,2023-11-30
 C00194,Huỳnh Đức Nhung,duc.nhung194@example.com,0865442241,TP.HCM,2022-06-23
 C00195,Trần Minh Hùng,minh.hung195@example.com,0980834876,TP.HCM,2023-07-12
-C00196,Dương Bảo Trang,bao.trang196@example.com,0977416270,TP.HCM,2023-03-18
+C00196,Dương Bảo Trang,bao.trang196@example.com,0977416270,Sài Gòn,2023-03-18
 C00197,Phạm Đức Trang,duc.trang197@example.com,0904752087,TP.HCM,2024-09-23
 C00198,Đặng Văn Linh,van.linh198@example.com,0970919088,Hà Nội,2023-09-10
 C00199,Phan Anh Hiếu,anh.hieu199@example.com,0934856117,Hà Nội,2022-01-16
@@ -240,7 +240,7 @@ C00238,Lê Thị Uyên,thi.uyen238@example.com,0988993490,Hà Nội,2024-11-21
 C00239,Vũ Khánh Hoa,khanh.hoa239@example.com,0937201433,Hà Nội,2023-12-24
 C00240,Vũ Gia Thảo,gia.thao240@example.com,0911436363,TP.HCM,2024-01-09
 C00241,Lê Hoài Yến,hoai.yen241@example.com,0988516493,TP.HCM,2024-03-10
-C00242,Lý Văn Sơn,van.son242@example.com,0934255545,TP.HCM,2024-01-02
+C00242,Lý Văn Sơn,van.son242@example.com,0934255545,Hồ Chí Minh,2024-01-02
 C00243,Lê Đức Long,duc.long243@example.com,0861739191,TP.HCM,2023-11-12
 C00244,Hoàng Văn Quân,van.quan244@example.com,0985679880,TP.HCM,2022-12-25
 C00245,Dương Khánh Tuấn,khanh.tuan245@example.com,0863058117,TP.HCM,2022-05-10
@@ -273,7 +273,7 @@ C00271,Hoàng Bảo Nhung,bao.nhung271@example.com,0988950276,Hà Nội,2022-12-
 C00272,Hoàng Minh Phúc,minh.phuc272@example.com,0980691125,TP.HCM,2022-02-28
 C00273,Lê Văn Mai,van.mai273@example.com,0863536777,TP.HCM,2024-05-03
 C00274,Nguyễn Thanh Yến,thanh.yen274@example.com,0935068298,TP.HCM,2024-04-11
-C00275,Đặng Thanh Giang,thanh.giang275@example.com,0861005173,Hà Nội,2024-05-01
+C00275,Đặng Thanh Giang,thanh.giang275@example.com,0861005173,Hà Nội ,2024-05-01
 C00276,Lý Thanh Lan,thanh.lan276@example.com,0932410360,Hà Nội,2023-10-16
 C00277,Đỗ Quang Hiếu,quang.hieu277@example.com,0938639932,TP.HCM,2023-10-16
 C00278,Vũ Thanh Hạnh,thanh.hanh278@example.com,0937542969,Hà Nội,2022-07-18
@@ -316,11 +316,11 @@ C00314,Dương Ngọc Khoa,ngoc.khoa314@example.com,0905547958,Hà Nội,2024-07
 C00315,Võ Khánh Hương,khanh.huong315@example.com,0905655803,TP.HCM,2023-01-31
 C00316,Huỳnh Gia Tâm,gia.tam316@example.com,0978644974,Hà Nội,2024-03-31
 C00317,Phạm Minh Hiếu,minh.hieu317@example.com,0975429135,Đà Nẵng,2022-01-14
-C00318,Võ Quang Long,quang.long318@example.com,0974479421,Đà Nẵng,2023-09-11
+C00318,Võ Quang Long,quang.long318@example.com,0974479421,Da Nang,2023-09-11
 C00319,Nguyễn Ngọc Quỳnh,ngoc.quynh319@example.com,0863964499,Hà Nội,2022-08-31
 C00320,Dương Ngọc Hùng,ngoc.hung320@example.com,0978430894,Đà Nẵng,2023-09-29
-C00321,Phạm Bảo Nga,bao.nga321@example.com,0933705235,Hà Nội,2022-10-01
-C00322,Lý Minh Tú,minh.tu322@example.com,0866268384,TP.HCM,2024-08-22
+C00321,Phạm Bảo Nga,bao.nga321@example.com,0933705235,ha noi,2022-10-01
+C00322,Lý Minh Tú,minh.tu322@example.com,0866268384,Sài Gòn,2024-08-22
 C00323,Phan Anh Long,anh.long323@example.com,0869996107,Đà Nẵng,2022-06-17
 C00324,Dương Hoài Quỳnh,hoai.quynh324@example.com,0909465180,Hà Nội,2024-11-01
 C00325,Phan Gia Yến,gia.yen325@example.com,0912760475,Hà Nội,2024-12-01
@@ -329,7 +329,7 @@ C00327,Dương Anh Dũng,anh.dung327@example.com,0972213658,TP.HCM,2024-07-24
 C00328,Trần Hoài Tú,hoai.tu328@example.com,0865170227,TP.HCM,2024-03-21
 C00329,Võ Hữu An,huu.an329@example.com,0863655777,TP.HCM,2022-04-03
 C00330,Ngô Đức Giang,duc.giang330@example.com,0981010921,Đà Nẵng,2022-05-22
-C00331,Lý Văn Nga,van.nga331@example.com,0973019585,TP.HCM,2024-05-10
+C00331,Lý Văn Nga,van.nga331@example.com,0973019585,TP HCM,2024-05-10
 C00332,Đỗ Phương Sơn,phuong.son332@example.com,0976333337,Hà Nội,2022-09-30
 C00333,Đỗ Thị Hương,thi.huong333@example.com,0986594429,TP.HCM,2023-04-02
 C00334,Nguyễn Anh Bình,anh.binh334@example.com,0937767916,TP.HCM,2024-05-18
@@ -376,7 +376,7 @@ C00374,Trần Thị Trang,thi.trang374@example.com,0911275374,Hà Nội,2024-03-
 C00375,Bùi Văn Nam,van.nam375@example.com,0978230960,Hà Nội,2024-02-08
 C00376,Ngô Minh Sơn,minh.son376@example.com,0904955645,TP.HCM,2022-05-31
 C00377,Lê Ngọc Hoa,ngoc.hoa377@example.com,0972588336,TP.HCM,2023-10-11
-C00378,Đỗ Thị Hà,thi.ha378@example.com,0905171869,TP.HCM,2023-07-07
+C00378,Đỗ Thị Hà,thi.ha378@example.com,0905171869,TP HCM,2023-07-07
 C00379,Phạm Minh Hà,minh.ha379@example.com,0917230636,TP.HCM,2024-11-15
 C00380,Ngô Thị Bình,thi.binh380@example.com,0905937696,TP.HCM,2023-10-27
 C00381,Hồ Văn Nga,van.nga381@example.com,0976506196,TP.HCM,2023-05-13
@@ -388,7 +388,7 @@ C00386,Bùi Hữu Sơn,huu.son386@example.com,0937385715,Hà Nội,2022-10-06
 C00387,Đặng Đức Khoa,duc.khoa387@example.com,0975271120,Hà Nội,2024-03-26
 C00388,Bùi Ngọc Uyên,ngoc.uyen388@example.com,0984067204,Hà Nội,2023-07-29
 C00389,Hồ Đức Hạnh,duc.hanh389@example.com,0983352088,TP.HCM,2023-01-04
-C00390,Nguyễn Khánh Tú,khanh.tu390@example.com,0863517316,TP.HCM,2023-08-20
+C00390,Nguyễn Khánh Tú,khanh.tu390@example.com,0863517316,HCM,2023-08-20
 C00391,Lê Hữu Thảo,huu.thao391@example.com,0868376917,Hà Nội,2023-09-13
 C00392,Vũ Ngọc Hoa,ngoc.hoa392@example.com,0867098909,TP.HCM,2022-06-01
 C00393,Dương Gia Tuấn,gia.tuan393@example.com,0986724393,TP.HCM,2024-05-06
@@ -428,7 +428,7 @@ C00426,Trần Ngọc Hiếu,ngoc.hieu426@example.com,0862226183,Hà Nội,2023-1
 C00427,Vũ Anh Tâm,anh.tam427@example.com,0972385244,TP.HCM,2023-07-05
 C00428,Ngô Quang Trung,quang.trung428@example.com,0901561871,TP.HCM,2023-07-24
 C00429,Đỗ Thanh Uyên,thanh.uyen429@example.com,0939763593,Hà Nội,2022-07-10
-C00430,Dương Bảo Quân,bao.quan430@example.com,0908966154,Hà Nội,2024-05-29
+C00430,Dương Bảo Quân,bao.quan430@example.com,0908966154,HN,2024-05-29
 C00431,Phan Thanh Nam,thanh.nam431@example.com,0934757902,Hà Nội,2022-09-25
 C00432,Lý Anh Phúc,anh.phuc432@example.com,0860812172,Hà Nội,2024-07-30
 C00433,Nguyễn Thị Hùng,thi.hung433@example.com,0977659103,Hà Nội,2024-05-26
@@ -464,7 +464,7 @@ C00462,Vũ Văn Tuấn,van.tuan462@example.com,0936425329,Đà Nẵng,2023-01-02
 C00463,Trần Hoài Thảo,hoai.thao463@example.com,0915398941,Hà Nội,2023-10-18
 C00464,Võ Hữu Giang,huu.giang464@example.com,0986254683,Hà Nội,2022-04-18
 C00465,Huỳnh Thu Vy,thu.vy465@example.com,0906726402,Hà Nội,2024-08-10
-C00466,Đặng Anh Nhung,anh.nhung466@example.com,0931449308,TP.HCM,2022-01-17
+C00466,Đặng Anh Nhung,anh.nhung466@example.com,0931449308,Hồ Chí Minh,2022-01-17
 C00467,Đỗ Thu Nga,thu.nga467@example.com,0985098752,TP.HCM,2023-05-12
 C00468,Dương Đức Uyên,duc.uyen468@example.com,0919169742,TP.HCM,2023-05-18
 C00469,Hoàng Văn Thảo,van.thao469@example.com,0903909053,TP.HCM,2022-01-20
@@ -512,7 +512,7 @@ C00510,Vũ Minh Trung,minh.trung510@example.com,0900560573,Hà Nội,2023-10-15
 C00511,Võ Thị Giang,thi.giang511@example.com,0932853891,Đà Nẵng,2022-11-26
 C00512,Lê Hoài Hà,hoai.ha512@example.com,0939966178,Đà Nẵng,2024-09-15
 C00513,Nguyễn Quang Hùng,quang.hung513@example.com,0987284673,Hà Nội,2022-07-27
-C00514,Bùi Thu Khoa,thu.khoa514@example.com,0979296463,TP.HCM,2023-06-28
+C00514,Bùi Thu Khoa,thu.khoa514@example.com,0979296463,Hồ Chí Minh,2023-06-28
 C00515,Đặng Ngọc Long,ngoc.long515@example.com,0900832744,Hà Nội,2024-10-02
 C00516,Hoàng Văn Quỳnh,van.quynh516@example.com,0907174037,Hà Nội,2024-09-10
 C00517,Phan Thị Bình,thi.binh517@example.com,0912866088,TP.HCM,2022-06-17
@@ -526,7 +526,7 @@ C00524,Vũ Thanh Nhung,thanh.nhung524@example.com,0906623718,Đà Nẵng,2022-03
 C00525,Hoàng Thị Trung,thi.trung525@example.com,0912804559,Đà Nẵng,2023-01-30
 C00526,Hoàng Văn Trang,van.trang526@example.com,0907304686,Hà Nội,2022-10-30
 C00527,Võ Đức Giang,duc.giang527@example.com,0906511223,TP.HCM,2023-10-30
-C00528,Võ Hoài Tú,hoai.tu528@example.com,0909857890,TP.HCM,2024-05-09
+C00528,Võ Hoài Tú,hoai.tu528@example.com,0909857890,Hồ Chí Minh,2024-05-09
 C00529,Phạm Quang Hoa,quang.hoa529@example.com,0919505868,TP.HCM,2022-07-25
 C00530,Phạm Gia Hải,gia.hai530@example.com,0938986438,Đà Nẵng,2024-04-21
 C00531,Võ Quang Uyên,quang.uyen531@example.com,0987936405,Hà Nội,2023-07-19
@@ -572,7 +572,7 @@ C00570,Huỳnh Phương Tâm,phuong.tam570@example.com,0903832222,Hà Nội,2022
 C00571,Phan Khánh Bình,khanh.binh571@example.com,0988466346,Hà Nội,2024-01-21
 C00572,Trần Quang Mai,quang.mai572@example.com,0980815153,TP.HCM,2022-04-09
 C00573,Phạm Bảo Bình,bao.binh573@example.com,0901942630,TP.HCM,2024-02-18
-C00574,Phạm Hoài Mai,hoai.mai574@example.com,0972569046,Hà Nội,2022-01-20
+C00574,Phạm Hoài Mai,hoai.mai574@example.com,0972569046,hà nội,2022-01-20
 C00575,Đặng Quang Hải,quang.hai575@example.com,0868729340,Hà Nội,2022-10-08
 C00576,Ngô Hữu Hải,huu.hai576@example.com,0981975258,Hà Nội,2022-08-06
 C00577,Lý Thu Khoa,thu.khoa577@example.com,0938776935,Đà Nẵng,2024-01-04
@@ -674,7 +674,7 @@ C00672,Đặng Thị Lan,thi.lan672@example.com,0977909005,Đà Nẵng,2022-12-1
 C00673,Vũ Hữu Thảo,huu.thao673@example.com,0982394312,TP.HCM,2023-01-08
 C00674,Võ Minh Phúc,minh.phuc674@example.com,0979908556,Hà Nội,2024-02-14
 C00675,Hồ Minh Hải,minh.hai675@example.com,0903394845,TP.HCM,2024-10-29
-C00676,Ngô Hữu Hoa,huu.hoa676@example.com,0981615622,Hà Nội,2022-03-21
+C00676,Ngô Hữu Hoa,huu.hoa676@example.com,0981615622,HN,2022-03-21
 C00677,Phạm Thị Tuấn,thi.tuan677@example.com,0862186555,Đà Nẵng,2022-01-03
 C00678,Ngô Hoài Thảo,hoai.thao678@example.com,0930728773,TP.HCM,2024-05-28
 C00679,Vũ Anh Tuấn,anh.tuan679@example.com,0975880713,TP.HCM,2022-07-20
@@ -685,7 +685,7 @@ C00683,Ngô Đức Hải,duc.hai683@example.com,0917148295,TP.HCM,2023-06-04
 C00684,Võ Hữu Yến,huu.yen684@example.com,0979473594,Hà Nội,2023-07-19
 C00685,Hồ Anh Lan,anh.lan685@example.com,0979262783,TP.HCM,2024-09-15
 C00686,Huỳnh Đức Tuấn,duc.tuan686@example.com,0935144785,TP.HCM,2024-03-26
-C00687,Hoàng Hữu Hạnh,huu.hanh687@example.com,0863854922,TP.HCM,2022-11-28
+C00687,Hoàng Hữu Hạnh,huu.hanh687@example.com,0863854922,tp.hcm,2022-11-28
 C00688,Phạm Thu Vân,thu.van688@example.com,0975678044,TP.HCM,2022-04-17
 C00689,Huỳnh Quang An,quang.an689@example.com,0902438206,TP.HCM,2024-06-10
 C00690,Lê Thị Mai,thi.mai690@example.com,0916221581,Hà Nội,2022-03-19
@@ -745,7 +745,7 @@ C00743,Võ Ngọc Yến,ngoc.yen743@example.com,0936927377,Hà Nội,2022-05-21
 C00744,Huỳnh Minh Nga,minh.nga744@example.com,0907639388,TP.HCM,2023-07-12
 C00745,Lý Thu Phong,thu.phong745@example.com,0902552641,Hà Nội,2024-12-31
 C00746,Nguyễn Minh Hải,minh.hai746@example.com,0934516344,Hà Nội,2024-06-16
-C00747,Nguyễn Thu Hà,thu.ha747@example.com,0910247041,TP.HCM,2023-12-02
+C00747,Nguyễn Thu Hà,thu.ha747@example.com,0910247041,Hồ Chí Minh,2023-12-02
 C00748,Ngô Ngọc Uyên,ngoc.uyen748@example.com,0937779334,TP.HCM,2022-03-06
 C00749,Bùi Thị Hoa,thi.hoa749@example.com,0904471188,TP.HCM,2022-05-27
 C00750,Lý Minh Khoa,minh.khoa750@example.com,0936401806,TP.HCM,2022-09-07
@@ -816,10 +816,10 @@ C00814,Bùi Thanh Yến,thanh.yen814@example.com,0913468811,TP.HCM,2023-02-19
 C00815,Hoàng Ngọc Vy,ngoc.vy815@example.com,0917215281,Đà Nẵng,2022-10-25
 C00816,Huỳnh Đức Giang,duc.giang816@example.com,0988941610,Đà Nẵng,2022-08-31
 C00817,Huỳnh Đức Hoa,duc.hoa817@example.com,0860494648,TP.HCM,2024-04-27
-C00818,Ngô Ngọc Trung,ngoc.trung818@example.com,0864593537,Hà Nội,2023-01-20
+C00818,Ngô Ngọc Trung,ngoc.trung818@example.com,0864593537,HN,2023-01-20
 C00819,Phạm Minh Hương,minh.huong819@example.com,0904477211,TP.HCM,2023-04-18
 C00820,Vũ Thu Bình,thu.binh820@example.com,0931333376,TP.HCM,2024-09-03
-C00821,Hoàng Hoài Tuấn,hoai.tuan821@example.com,0866273997,Hà Nội,2024-03-04
+C00821,Hoàng Hoài Tuấn,hoai.tuan821@example.com,0866273997,Hà Nội ,2024-03-04
 C00822,Lý Thanh Hiếu,thanh.hieu822@example.com,0913242361,Hà Nội,2024-04-16
 C00823,Nguyễn Phương Nam,phuong.nam823@example.com,0973733840,TP.HCM,2023-02-20
 C00824,Phan Thị Hương,thi.huong824@example.com,0978219877,TP.HCM,2024-07-26
@@ -897,7 +897,7 @@ C00895,Hồ Hữu Quỳnh,huu.quynh895@example.com,0972588175,Hà Nội,2022-09-
 C00896,Hoàng Văn Giang,van.giang896@example.com,0860263533,Hà Nội,2024-09-23
 C00897,Ngô Minh Hà,minh.ha897@example.com,0916976896,Đà Nẵng,2024-05-21
 C00898,Huỳnh Thanh Vân,thanh.van898@example.com,0979261862,TP.HCM,2024-02-27
-C00899,Đỗ Thu Hương,thu.huong899@example.com,0970124654,TP.HCM,2023-04-30
+C00899,Đỗ Thu Hương,thu.huong899@example.com,0970124654,Sài Gòn,2023-04-30
 C00900,Võ Quang Yến,quang.yen900@example.com,0986156735,Hà Nội,2022-03-19
 C00901,Lý Khánh Quỳnh,khanh.quynh901@example.com,0909735294,TP.HCM,2022-06-13
 C00902,Hoàng Khánh Vy,khanh.vy902@example.com,0937800337,TP.HCM,2024-12-07
@@ -906,7 +906,7 @@ C00904,Trần Phương Phúc,phuong.phuc904@example.com,0980180915,TP.HCM,2024-1
 C00905,Lý Gia Phúc,gia.phuc905@example.com,0975920923,Đà Nẵng,2023-08-27
 C00906,Đặng Minh Châu,minh.chau906@example.com,0865101462,TP.HCM,2023-06-18
 C00907,Trần Bảo Tuấn,bao.tuan907@example.com,0982836678,TP.HCM,2023-08-21
-C00908,Nguyễn Ngọc Uyên,ngoc.uyen908@example.com,0902127708,TP.HCM,2023-07-24
+C00908,Nguyễn Ngọc Uyên,ngoc.uyen908@example.com,0902127708,Hồ Chí Minh,2023-07-24
 C00909,Võ Minh Nam,minh.nam909@example.com,0934311001,Hà Nội,2022-08-17
 C00910,Huỳnh Phương Hoa,phuong.hoa910@example.com,0867493596,Hà Nội,2022-12-26
 C00911,Võ Anh Long,anh.long911@example.com,0973033474,TP.HCM,2022-03-09
@@ -924,7 +924,7 @@ C00922,Đỗ Thu Nga,thu.nga922@example.com,0933239337,Hà Nội,2022-07-08
 C00923,Trần Gia Lan,gia.lan923@example.com,0982043299,TP.HCM,2022-09-03
 C00924,Lê Hữu Hiếu,huu.hieu924@example.com,0979497058,TP.HCM,2023-01-14
 C00925,Phạm Khánh Hương,khanh.huong925@example.com,0934942041,TP.HCM,2022-06-05
-C00926,Dương Phương Nam,phuong.nam926@example.com,0975425820,Hà Nội,2022-06-01
+C00926,Dương Phương Nam,phuong.nam926@example.com,0975425820,Ha Noi,2022-06-01
 C00927,Võ Anh Dũng,anh.dung927@example.com,0976519465,Hà Nội,2022-05-04
 C00928,Võ Hữu Mai,huu.mai928@example.com,0917391619,Hà Nội,2023-02-15
 C00929,Hồ Minh Uyên,minh.uyen929@example.com,0902413781,TP.HCM,2024-06-02
@@ -935,7 +935,7 @@ C00933,Hồ Gia An,gia.an933@example.com,0988232235,TP.HCM,2024-04-07
 C00934,Lê Hoài Linh,hoai.linh934@example.com,0906449562,Đà Nẵng,2024-09-14
 C00935,Phạm Gia Yến,gia.yen935@example.com,0935594190,TP.HCM,2024-03-31
 C00936,Trần Bảo Hà,bao.ha936@example.com,0938969540,Đà Nẵng,2023-11-28
-C00937,Lê Hữu Tú,huu.tu937@example.com,0933407796,Hà Nội,2022-03-22
+C00937,Lê Hữu Tú,huu.tu937@example.com,0933407796,Ha Noi,2022-03-22
 C00938,Hồ Bảo Khoa,bao.khoa938@example.com,0936544871,Đà Nẵng,2024-01-06
 C00939,Lý Thị Trung,thi.trung939@example.com,0863178686,Hà Nội,2023-01-31
 C00940,Nguyễn Khánh Long,khanh.long940@example.com,0976522436,Hà Nội,2023-09-23
@@ -979,7 +979,7 @@ C00977,Dương Khánh An,khanh.an977@example.com,0861186125,Hà Nội,2023-11-13
 C00978,Trần Ngọc Trang,ngoc.trang978@example.com,0939100550,TP.HCM,2023-03-01
 C00979,Lê Gia Phúc,gia.phuc979@example.com,0860919587,TP.HCM,2024-01-16
 C00980,Trần Thị Sơn,thi.son980@example.com,0937807325,TP.HCM,2024-01-19
-C00981,Đỗ Minh Giang,minh.giang981@example.com,0983434507,Hà Nội,2023-11-17
+C00981,Đỗ Minh Giang,minh.giang981@example.com,0983434507,hà nội,2023-11-17
 C00982,Vũ Hoài Hạnh,hoai.hanh982@example.com,0868027788,TP.HCM,2023-03-06
 C00983,Vũ Đức Quân,duc.quan983@example.com,0938448435,TP.HCM,2023-07-22
 C00984,Trần Thị Quỳnh,thi.quynh984@example.com,0937590191,TP.HCM,2024-12-14
@@ -1079,7 +1079,7 @@ C01077,Đặng Thanh Uyên,thanh.uyen1077@example.com,0987317096,TP.HCM,2022-03-
 C01078,Phan Minh Nam,minh.nam1078@example.com,0910488919,Hà Nội,2023-07-23
 C01079,Huỳnh Bảo Châu,bao.chau1079@example.com,0868151075,TP.HCM,2022-04-24
 C01080,Lê Đức Nhung,duc.nhung1080@example.com,0906828441,Đà Nẵng,2022-07-04
-C01081,Hồ Hữu Hiếu,huu.hieu1081@example.com,0911877913,TP.HCM,2024-10-21
+C01081,Hồ Hữu Hiếu,huu.hieu1081@example.com,0911877913,tp.hcm,2024-10-21
 C01082,Phạm Hoài Vy,hoai.vy1082@example.com,0938329067,Đà Nẵng,2023-05-03
 C01083,Phạm Anh Phong,anh.phong1083@example.com,0939803367,TP.HCM,2023-04-29
 C01084,Ngô Thu Hoa,thu.hoa1084@example.com,0902938600,Hà Nội,2023-07-17
@@ -1144,7 +1144,7 @@ C01142,Bùi Phương Hương,phuong.huong1142@example.com,0913105251,Hà Nội,2
 C01143,Phạm Quang Yến,quang.yen1143@example.com,0900098097,Hà Nội,2022-01-28
 C01144,Huỳnh Bảo Tuấn,bao.tuan1144@example.com,0976796309,Đà Nẵng,2024-09-23
 C01145,Đặng Gia Quỳnh,gia.quynh1145@example.com,0866626953,TP.HCM,2022-06-29
-C01146,Hoàng Minh An,minh.an1146@example.com,0911877580,TP.HCM,2023-01-21
+C01146,Hoàng Minh An,minh.an1146@example.com,0911877580,Hồ Chí Minh,2023-01-21
 C01147,Nguyễn Thu Tuấn,thu.tuan1147@example.com,0862435283,TP.HCM,2024-06-11
 C01148,Phan Thị Nhung,thi.nhung1148@example.com,0972485807,TP.HCM,2022-02-14
 C01149,Phạm Minh Hoa,minh.hoa1149@example.com,0867470322,Đà Nẵng,2024-08-23
@@ -1165,12 +1165,12 @@ C01163,Phạm Hoài Linh,hoai.linh1163@example.com,0974325537,Đà Nẵng,2023-1
 C01164,Trần Anh Nam,anh.nam1164@example.com,0918646766,TP.HCM,2022-08-02
 C01165,Trần Phương Trung,phuong.trung1165@example.com,0971861110,Đà Nẵng,2022-07-28
 C01166,Trần Hoài Hải,hoai.hai1166@example.com,0911980707,Đà Nẵng,2024-01-11
-C01167,Huỳnh Khánh Nga,khanh.nga1167@example.com,0867407441,TP.HCM,2024-10-17
+C01167,Huỳnh Khánh Nga,khanh.nga1167@example.com,0867407441,Hồ Chí Minh,2024-10-17
 C01168,Phạm Minh Quỳnh,minh.quynh1168@example.com,0932311438,Hà Nội,2023-02-18
 C01169,Dương Quang An,quang.an1169@example.com,0917946752,Hà Nội,2024-10-31
 C01170,Huỳnh Thị Nam,thi.nam1170@example.com,0936962689,Hà Nội,2023-05-18
 C01171,Hoàng Anh Vy,anh.vy1171@example.com,0973828258,Hà Nội,2024-05-28
-C01172,Ngô Phương Thảo,phuong.thao1172@example.com,0978659648,TP.HCM,2024-01-11
+C01172,Ngô Phương Thảo,phuong.thao1172@example.com,0978659648,tp.hcm,2024-01-11
 C01173,Nguyễn Thanh Hoa,thanh.hoa1173@example.com,0908679670,Đà Nẵng,2022-06-23
 C01174,Bùi Đức Tâm,duc.tam1174@example.com,0917282524,Hà Nội,2022-03-17
 C01175,Hoàng Phương Dũng,phuong.dung1175@example.com,0868720433,Đà Nẵng,2024-05-08
@@ -1179,7 +1179,7 @@ C01177,Võ Phương Vy,phuong.vy1177@example.com,0982463932,TP.HCM,2024-07-02
 C01178,Phan Phương Yến,phuong.yen1178@example.com,0987417942,TP.HCM,2024-04-08
 C01179,Phan Phương Nhung,phuong.nhung1179@example.com,0900620256,TP.HCM,2024-03-09
 C01180,Hoàng Hoài Yến,hoai.yen1180@example.com,0933585870,Hà Nội,2023-10-02
-C01181,Bùi Anh Hùng,anh.hung1181@example.com,0900467937,Đà Nẵng,2023-06-14
+C01181,Bùi Anh Hùng,anh.hung1181@example.com,0900467937,đà nẵng,2023-06-14
 C01182,Vũ Hữu Nhung,huu.nhung1182@example.com,0867092498,Đà Nẵng,2022-08-15
 C01183,Trần Hữu Quỳnh,huu.quynh1183@example.com,0938514426,Hà Nội,2022-04-08
 C01184,Phạm Thanh Nhung,thanh.nhung1184@example.com,0980087466,TP.HCM,2023-04-29
@@ -1224,9 +1224,9 @@ C01222,Lê Ngọc Hà,ngoc.ha1222@example.com,0972063211,TP.HCM,2023-07-27
 C01223,Ngô Thu Vân,thu.van1223@example.com,0935748465,TP.HCM,2024-07-16
 C01224,Võ Thu Phong,thu.phong1224@example.com,0933533682,TP.HCM,2023-11-04
 C01225,Nguyễn Phương Hiếu,phuong.hieu1225@example.com,0860034351,TP.HCM,2022-01-09
-C01226,Nguyễn Bảo Hương,bao.huong1226@example.com,0979324619,Đà Nẵng,2024-09-28
+C01226,Nguyễn Bảo Hương,bao.huong1226@example.com,0979324619,DN,2024-09-28
 C01227,Hồ Hoài Hà,hoai.ha1227@example.com,0861300622,TP.HCM,2024-06-30
-C01228,Phạm Đức Sơn,duc.son1228@example.com,0986005668,Hà Nội,2022-01-18
+C01228,Phạm Đức Sơn,duc.son1228@example.com,0986005668,HN,2022-01-18
 C01229,Phạm Thanh Quỳnh,thanh.quynh1229@example.com,0917458775,Hà Nội,2022-02-10
 C01230,Võ Bảo Quân,bao.quan1230@example.com,0911509387,TP.HCM,2023-09-13
 C01231,Vũ Thu Uyên,thu.uyen1231@example.com,0930617335,Hà Nội,2023-03-05
@@ -1270,7 +1270,7 @@ C01268,Vũ Phương Châu,phuong.chau1268@example.com,0989853693,Hà Nội,2023-
 C01269,Hoàng Đức Long,duc.long1269@example.com,0904698850,Đà Nẵng,2024-11-06
 C01270,Lý Thu Hà,thu.ha1270@example.com,0971088389,Hà Nội,2024-03-05
 C01271,Đỗ Thanh Vy,thanh.vy1271@example.com,0973003096,Hà Nội,2024-02-05
-C01272,Lý Khánh Uyên,khanh.uyen1272@example.com,0974501921,TP.HCM,2022-03-16
+C01272,Lý Khánh Uyên,khanh.uyen1272@example.com,0974501921,tp.hcm,2022-03-16
 C01273,Phan Thu Khoa,thu.khoa1273@example.com,0973932320,Hà Nội,2023-09-19
 C01274,Ngô Phương Sơn,phuong.son1274@example.com,0982637534,Đà Nẵng,2024-02-06
 C01275,Võ Hoài Hà,hoai.ha1275@example.com,0911409758,Hà Nội,2024-11-28
@@ -1283,7 +1283,7 @@ C01281,Phan Đức Khoa,duc.khoa1281@example.com,0865523752,Hà Nội,2023-07-17
 C01282,Phan Khánh Hiếu,khanh.hieu1282@example.com,0869112136,Đà Nẵng,2022-01-18
 C01283,Đặng Ngọc Quân,ngoc.quan1283@example.com,0976807497,TP.HCM,2022-01-25
 C01284,Lý Bảo Vân,bao.van1284@example.com,0916669032,Hà Nội,2023-03-06
-C01285,Lý Thu Vy,thu.vy1285@example.com,0989271345,TP.HCM,2024-08-02
+C01285,Lý Thu Vy,thu.vy1285@example.com,0989271345,Sài Gòn,2024-08-02
 C01286,Bùi Anh Hà,anh.ha1286@example.com,0933151542,TP.HCM,2024-05-05
 C01287,Phan Thanh Trung,thanh.trung1287@example.com,0980505062,Hà Nội,2022-09-20
 C01288,Đặng Khánh An,khanh.an1288@example.com,0975950248,Hà Nội,2024-05-08
@@ -1304,7 +1304,7 @@ C01302,Ngô Thu Hương,thu.huong1302@example.com,0987249042,TP.HCM,2023-01-11
 C01303,Phạm Quang Châu,quang.chau1303@example.com,0912649663,Hà Nội,2023-08-21
 C01304,Lê Khánh Lan,khanh.lan1304@example.com,0976900102,Đà Nẵng,2022-09-06
 C01305,Đỗ Thị Hải,thi.hai1305@example.com,0985469592,TP.HCM,2022-12-04
-C01306,Võ Thu Vân,thu.van1306@example.com,0907753883,Hà Nội,2024-08-03
+C01306,Võ Thu Vân,thu.van1306@example.com,0907753883,ha noi,2024-08-03
 C01307,Hồ Đức Tâm,duc.tam1307@example.com,0916655090,Hà Nội,2023-05-29
 C01308,Phạm Khánh Hiếu,khanh.hieu1308@example.com,0937788747,TP.HCM,2022-05-20
 C01309,Lê Hoài Long,hoai.long1309@example.com,0867343784,Hà Nội,2023-07-26
@@ -1320,7 +1320,7 @@ C01318,Ngô Hoài Hải,hoai.hai1318@example.com,0935413664,TP.HCM,2023-01-24
 C01319,Phan Phương Yến,phuong.yen1319@example.com,0977178640,Hà Nội,2023-03-14
 C01320,Phạm Đức Phong,duc.phong1320@example.com,0910251567,TP.HCM,2023-10-10
 C01321,Nguyễn Quang Lan,quang.lan1321@example.com,0973692601,Hà Nội,2023-07-25
-C01322,Đỗ Văn Giang,van.giang1322@example.com,0916897060,Hà Nội,2024-10-20
+C01322,Đỗ Văn Giang,van.giang1322@example.com,0916897060,HN,2024-10-20
 C01323,Phạm Khánh Yến,khanh.yen1323@example.com,0982876606,Hà Nội,2022-07-14
 C01324,Bùi Bảo Sơn,bao.son1324@example.com,0862230219,Hà Nội,2023-10-14
 C01325,Lý Thị Phúc,thi.phuc1325@example.com,0909815290,TP.HCM,2024-11-12
@@ -1369,11 +1369,11 @@ C01367,Bùi Văn Quỳnh,van.quynh1367@example.com,0905461406,TP.HCM,2023-04-24
 C01368,Lý Quang Hà,quang.ha1368@example.com,0937179243,Đà Nẵng,2024-09-02
 C01369,Phạm Khánh Sơn,khanh.son1369@example.com,0933272848,TP.HCM,2024-12-01
 C01370,Trần Minh Uyên,minh.uyen1370@example.com,0905055785,TP.HCM,2024-08-14
-C01371,Huỳnh Phương Trung,phuong.trung1371@example.com,0908089445,TP.HCM,2023-05-09
+C01371,Huỳnh Phương Trung,phuong.trung1371@example.com,0908089445,tp.hcm,2023-05-09
 C01372,Vũ Thu Hùng,thu.hung1372@example.com,0861500416,Hà Nội,2022-03-01
 C01373,Huỳnh Phương Phong,phuong.phong1373@example.com,0974703624,Hà Nội,2023-06-12
 C01374,Lý Phương Hạnh,phuong.hanh1374@example.com,0862277614,Đà Nẵng,2024-10-04
-C01375,Lê Anh Phúc,anh.phuc1375@example.com,0919663208,TP.HCM,2022-05-13
+C01375,Lê Anh Phúc,anh.phuc1375@example.com,0919663208,Hồ Chí Minh,2022-05-13
 C01376,Bùi Quang Sơn,quang.son1376@example.com,0869427116,Đà Nẵng,2024-06-13
 C01377,Vũ Thu Mai,thu.mai1377@example.com,0904881775,Hà Nội,2022-07-02
 C01378,Bùi Khánh Khoa,khanh.khoa1378@example.com,0861947939,TP.HCM,2022-09-18
@@ -1434,7 +1434,7 @@ C01432,Vũ Minh Giang,minh.giang1432@example.com,0932236718,TP.HCM,2022-04-15
 C01433,Ngô Thanh Sơn,thanh.son1433@example.com,0916262661,Đà Nẵng,2023-11-24
 C01434,Vũ Hữu Yến,huu.yen1434@example.com,0904866478,Hà Nội,2023-08-25
 C01435,Võ Thu An,thu.an1435@example.com,0869543584,Hà Nội,2023-09-17
-C01436,Trần Phương Tú,phuong.tu1436@example.com,0988191751,Hà Nội,2022-01-13
+C01436,Trần Phương Tú,phuong.tu1436@example.com,0988191751,HN,2022-01-13
 C01437,Dương Đức Nhung,duc.nhung1437@example.com,0931797914,Hà Nội,2023-01-17
 C01438,Hồ Đức An,duc.an1438@example.com,0907227688,TP.HCM,2022-06-23
 C01439,Hoàng Quang Hạnh,quang.hanh1439@example.com,0970115938,Hà Nội,2023-05-28
@@ -1489,7 +1489,7 @@ C01487,Lê Thu Hiếu,thu.hieu1487@example.com,0979443076,Đà Nẵng,2022-12-01
 C01488,Đặng Đức Tuấn,duc.tuan1488@example.com,0914090433,Hà Nội,2023-07-02
 C01489,Phạm Văn Châu,van.chau1489@example.com,0909137578,Hà Nội,2024-11-13
 C01490,Ngô Minh An,minh.an1490@example.com,0910402667,Hà Nội,2024-02-29
-C01491,Hoàng Đức Nga,duc.nga1491@example.com,0916454929,TP.HCM,2022-08-19
+C01491,Hoàng Đức Nga,duc.nga1491@example.com,0916454929,TP HCM,2022-08-19
 C01492,Lý Minh Hạnh,minh.hanh1492@example.com,0911706851,Đà Nẵng,2023-08-01
 C01493,Đỗ Thị Phúc,thi.phuc1493@example.com,0906048077,Đà Nẵng,2022-06-23
 C01494,Trần Gia Hoa,gia.hoa1494@example.com,0917191191,TP.HCM,2023-01-07
@@ -1512,7 +1512,7 @@ C01510,Lý Khánh Hiếu,khanh.hieu1510@example.com,0868849143,TP.HCM,2023-09-06
 C01511,Lý Quang Phúc,quang.phuc1511@example.com,0970221617,Hà Nội,2022-11-16
 C01512,Trần Phương Châu,phuong.chau1512@example.com,0982912192,TP.HCM,2022-01-23
 C01513,Hồ Hữu Trang,huu.trang1513@example.com,0867621830,TP.HCM,2023-06-13
-C01514,Đặng Khánh Linh,khanh.linh1514@example.com,0972630678,Hà Nội,2022-07-08
+C01514,Đặng Khánh Linh,khanh.linh1514@example.com,0972630678,Hà Nội ,2022-07-08
 C01515,Hồ Minh Lan,minh.lan1515@example.com,0970939470,Hà Nội,2023-01-12
 C01516,Lê Hữu Tú,huu.tu1516@example.com,0975254450,TP.HCM,2024-04-09
 C01517,Hồ Minh Dũng,minh.dung1517@example.com,0937117262,Hà Nội,2022-08-11
@@ -1527,7 +1527,7 @@ C01525,Trần Ngọc Hùng,ngoc.hung1525@example.com,0917769633,Hà Nội,2022-0
 C01526,Vũ Phương Lan,phuong.lan1526@example.com,0862363282,TP.HCM,2022-11-26
 C01527,Bùi Thanh Hiếu,thanh.hieu1527@example.com,0934879512,Hà Nội,2024-06-01
 C01528,Trần Phương Sơn,phuong.son1528@example.com,0913503428,Đà Nẵng,2022-06-03
-C01529,Hoàng Gia Uyên,gia.uyen1529@example.com,0900250681,Hà Nội,2023-09-26
+C01529,Hoàng Gia Uyên,gia.uyen1529@example.com,0900250681,ha noi,2023-09-26
 C01530,Lê Thanh Hải,thanh.hai1530@example.com,0975263326,Hà Nội,2023-08-29
 C01531,Huỳnh Thị Nam,thi.nam1531@example.com,0986095636,Hà Nội,2022-05-26
 C01532,Huỳnh Khánh Tú,khanh.tu1532@example.com,0937940001,Đà Nẵng,2024-06-24
@@ -1558,7 +1558,7 @@ C01556,Lý Bảo Tú,bao.tu1556@example.com,0976885148,Hà Nội,2024-05-22
 C01557,Bùi Thị Hương,thi.huong1557@example.com,0977187084,Hà Nội,2022-11-30
 C01558,Ngô Quang Nga,quang.nga1558@example.com,0867339925,TP.HCM,2022-07-23
 C01559,Lê Anh Hải,anh.hai1559@example.com,0900275590,TP.HCM,2024-04-22
-C01560,Phạm Thanh Yến,thanh.yen1560@example.com,0907450817,TP.HCM,2022-03-08
+C01560,Phạm Thanh Yến,thanh.yen1560@example.com,0907450817,Hồ Chí Minh,2022-03-08
 C01561,Đặng Hữu Thảo,huu.thao1561@example.com,0913739295,TP.HCM,2024-02-20
 C01562,Phạm Thu Tuấn,thu.tuan1562@example.com,0905882321,Đà Nẵng,2024-08-08
 C01563,Ngô Phương Tâm,phuong.tam1563@example.com,0906285479,TP.HCM,2024-11-05
@@ -1567,7 +1567,7 @@ C01565,Ngô Văn An,van.an1565@example.com,0902573211,TP.HCM,2024-11-28
 C01566,Bùi Đức Hùng,duc.hung1566@example.com,0987214533,Hà Nội,2024-03-12
 C01567,Phan Gia Tâm,gia.tam1567@example.com,0909694774,TP.HCM,2024-03-10
 C01568,Huỳnh Quang Phong,quang.phong1568@example.com,0982658243,TP.HCM,2022-07-23
-C01569,Hoàng Hoài Hạnh,hoai.hanh1569@example.com,0869679342,TP.HCM,2023-06-17
+C01569,Hoàng Hoài Hạnh,hoai.hanh1569@example.com,0869679342,Hồ Chí Minh,2023-06-17
 C01570,Huỳnh Đức Lan,duc.lan1570@example.com,0901564733,Hà Nội,2022-01-24
 C01571,Hoàng Văn Yến,van.yen1571@example.com,0909593108,Hà Nội,2022-09-25
 C01572,Dương Bảo Quân,bao.quan1572@example.com,0914021865,TP.HCM,2023-03-31
@@ -1633,7 +1633,7 @@ C01631,Lý Hữu Long,huu.long1631@example.com,0971835192,Hà Nội,2022-02-05
 C01632,Đặng Hữu Linh,huu.linh1632@example.com,0988441397,Hà Nội,2022-10-28
 C01633,Phạm Thị Nhung,thi.nhung1633@example.com,0865631731,TP.HCM,2023-12-20
 C01634,Võ Bảo Uyên,bao.uyen1634@example.com,0936111760,TP.HCM,2023-12-24
-C01635,Đặng Khánh Phúc,khanh.phuc1635@example.com,0989994918,TP.HCM,2023-07-07
+C01635,Đặng Khánh Phúc,khanh.phuc1635@example.com,0989994918,HCM,2023-07-07
 C01636,Nguyễn Minh Thảo,minh.thao1636@example.com,0912376209,Hà Nội,2022-03-05
 C01637,Vũ Gia Trang,gia.trang1637@example.com,0933461265,TP.HCM,2023-02-01
 C01638,Hồ Bảo Hải,bao.hai1638@example.com,0939142180,Đà Nẵng,2024-07-09
@@ -1647,7 +1647,7 @@ C01645,Đặng Văn Trang,van.trang1645@example.com,0930010766,Hà Nội,2022-10
 C01646,Đỗ Phương Nga,phuong.nga1646@example.com,0989407809,Hà Nội,2022-06-26
 C01647,Võ Minh Khoa,minh.khoa1647@example.com,0979818443,Đà Nẵng,2023-08-19
 C01648,Vũ Văn Tuấn,van.tuan1648@example.com,0934172971,TP.HCM,2024-03-02
-C01649,Ngô Quang Hải,quang.hai1649@example.com,0935067099,TP.HCM,2022-12-21
+C01649,Ngô Quang Hải,quang.hai1649@example.com,0935067099,HCM,2022-12-21
 C01650,Ngô Bảo Phong,bao.phong1650@example.com,0982334991,TP.HCM,2023-02-13
 C01651,Võ Minh Thảo,minh.thao1651@example.com,0983347443,Hà Nội,2022-06-25
 C01652,Đặng Gia Tú,gia.tu1652@example.com,0983076474,Hà Nội,2024-06-13
@@ -1682,20 +1682,20 @@ C01680,Lê Văn Mai,van.mai1680@example.com,0900627774,TP.HCM,2022-05-30
 C01681,Dương Anh Quỳnh,anh.quynh1681@example.com,0980494247,Đà Nẵng,2023-10-20
 C01682,Phạm Khánh Trung,khanh.trung1682@example.com,0972235004,Đà Nẵng,2023-02-14
 C01683,Phan Ngọc Uyên,ngoc.uyen1683@example.com,0974799782,Hà Nội,2022-11-28
-C01684,Ngô Hữu Vy,huu.vy1684@example.com,0911443147,TP.HCM,2022-07-17
+C01684,Ngô Hữu Vy,huu.vy1684@example.com,0911443147,TP HCM,2022-07-17
 C01685,Phan Văn Hiếu,van.hieu1685@example.com,0906032432,TP.HCM,2022-05-28
 C01686,Bùi Minh Vy,minh.vy1686@example.com,0973189967,TP.HCM,2024-08-28
 C01687,Đỗ Đức Hiếu,duc.hieu1687@example.com,0907363152,TP.HCM,2024-02-10
 C01688,Lê Gia Hà,gia.ha1688@example.com,0918677962,Hà Nội,2022-08-30
 C01689,Lý Thu Dũng,thu.dung1689@example.com,0989068723,Hà Nội,2023-04-04
-C01690,Đặng Phương Mai,phuong.mai1690@example.com,0976004652,Hà Nội,2022-11-20
+C01690,Đặng Phương Mai,phuong.mai1690@example.com,0976004652,Ha Noi,2022-11-20
 C01691,Đặng Thị Yến,thi.yen1691@example.com,0984049993,Đà Nẵng,2024-10-21
 C01692,Đặng Quang Dũng,quang.dung1692@example.com,0981860164,TP.HCM,2023-06-23
 C01693,Nguyễn Văn Phúc,van.phuc1693@example.com,0974376858,Hà Nội,2022-05-02
 C01694,Hoàng Thu Phúc,thu.phuc1694@example.com,0861045698,Hà Nội,2022-05-30
 C01695,Trần Đức Giang,duc.giang1695@example.com,0971352134,Đà Nẵng,2024-09-07
 C01696,Hoàng Ngọc Châu,ngoc.chau1696@example.com,0900597270,TP.HCM,2023-04-07
-C01697,Đỗ Quang Tuấn,quang.tuan1697@example.com,0933821097,Hà Nội,2022-04-24
+C01697,Đỗ Quang Tuấn,quang.tuan1697@example.com,0933821097,hà nội,2022-04-24
 C01698,Nguyễn Anh Khoa,anh.khoa1698@example.com,0986365080,TP.HCM,2022-02-07
 C01699,Lý Văn Sơn,van.son1699@example.com,0972101134,TP.HCM,2024-05-24
 C01700,Hoàng Thị Trung,thi.trung1700@example.com,0906169127,Hà Nội,2023-12-04
@@ -1722,7 +1722,7 @@ C01720,Đặng Đức Tâm,duc.tam1720@example.com,0904601485,Hà Nội,2023-05-
 C01721,Nguyễn Thị Nhung,thi.nhung1721@example.com,0985385308,TP.HCM,2023-01-02
 C01722,Dương Thanh Bình,thanh.binh1722@example.com,0970148825,TP.HCM,2024-01-05
 C01723,Lý Bảo Lan,bao.lan1723@example.com,0970982890,TP.HCM,2022-06-12
-C01724,Võ Phương Phong,phuong.phong1724@example.com,0907389348,Hà Nội,2023-07-20
+C01724,Võ Phương Phong,phuong.phong1724@example.com,0907389348,HN,2023-07-20
 C01725,Võ Hữu Uyên,huu.uyen1725@example.com,0913815456,TP.HCM,2022-10-28
 C01726,Trần Thu Hạnh,thu.hanh1726@example.com,0860645952,Hà Nội,2024-11-03
 C01727,Dương Gia Phong,gia.phong1727@example.com,0909284640,TP.HCM,2022-05-05
@@ -1733,13 +1733,13 @@ C01731,Lê Bảo Trang,bao.trang1731@example.com,0932400475,Hà Nội,2024-01-08
 C01732,Bùi Quang Quỳnh,quang.quynh1732@example.com,0974933559,TP.HCM,2022-11-25
 C01733,Đỗ Văn Nga,van.nga1733@example.com,0919919150,Hà Nội,2023-03-10
 C01734,Bùi Hoài Vân,hoai.van1734@example.com,0985772247,Đà Nẵng,2024-02-15
-C01735,Trần Bảo Hoa,bao.hoa1735@example.com,0971316088,Đà Nẵng,2023-04-05
+C01735,Trần Bảo Hoa,bao.hoa1735@example.com,0971316088,Da Nang,2023-04-05
 C01736,Ngô Hoài Hạnh,hoai.hanh1736@example.com,0980862877,TP.HCM,2024-12-10
 C01737,Dương Đức Nam,duc.nam1737@example.com,0919650988,Hà Nội,2023-05-15
 C01738,Bùi Thu Quỳnh,thu.quynh1738@example.com,0917647410,Hà Nội,2022-08-25
 C01739,Vũ Thanh Thảo,thanh.thao1739@example.com,0931336977,Hà Nội,2024-11-01
 C01740,Lê Phương Quỳnh,phuong.quynh1740@example.com,0868122764,TP.HCM,2024-07-08
-C01741,Ngô Thu Hiếu,thu.hieu1741@example.com,0984109477,TP.HCM,2024-04-14
+C01741,Ngô Thu Hiếu,thu.hieu1741@example.com,0984109477,HCM,2024-04-14
 C01742,Hoàng Gia Mai,gia.mai1742@example.com,0935730623,Hà Nội,2022-06-16
 C01743,Ngô Quang Vân,quang.van1743@example.com,0919663873,TP.HCM,2023-02-10
 C01744,Huỳnh Phương Tú,phuong.tu1744@example.com,0902797952,Hà Nội,2023-06-24
@@ -1749,7 +1749,7 @@ C01747,Đỗ Minh Tâm,minh.tam1747@example.com,0869343915,Hà Nội,2023-08-24
 C01748,Phạm Đức Phúc,duc.phuc1748@example.com,0981808110,Đà Nẵng,2022-04-03
 C01749,Lê Khánh Quân,khanh.quan1749@example.com,0976859779,TP.HCM,2024-06-11
 C01750,Đặng Anh Tuấn,anh.tuan1750@example.com,0862258306,TP.HCM,2024-11-09
-C01751,Lê Minh An,minh.an1751@example.com,0989949699,Hà Nội,2024-07-17
+C01751,Lê Minh An,minh.an1751@example.com,0989949699,HN,2024-07-17
 C01752,Hồ Đức Trung,duc.trung1752@example.com,0918534019,TP.HCM,2023-07-27
 C01753,Phạm Thu Nhung,thu.nhung1753@example.com,0975722997,Hà Nội,2024-11-26
 C01754,Ngô Ngọc Phong,ngoc.phong1754@example.com,0975344856,TP.HCM,2022-10-21
@@ -1775,7 +1775,7 @@ C01773,Đặng Thị Linh,thi.linh1773@example.com,0904819613,TP.HCM,2024-07-04
 C01774,Bùi Thu Trang,thu.trang1774@example.com,0902956052,TP.HCM,2023-10-16
 C01775,Phạm Đức Tâm,duc.tam1775@example.com,0862148454,TP.HCM,2024-09-17
 C01776,Lý Gia Thảo,gia.thao1776@example.com,0863940297,Hà Nội,2023-07-03
-C01777,Phan Phương Thảo,phuong.thao1777@example.com,0909433112,TP.HCM,2023-06-20
+C01777,Phan Phương Thảo,phuong.thao1777@example.com,0909433112,Sài Gòn,2023-06-20
 C01778,Bùi Quang Tâm,quang.tam1778@example.com,0977133660,Hà Nội,2022-04-22
 C01779,Võ Thanh Linh,thanh.linh1779@example.com,0930765519,Hà Nội,2024-04-19
 C01780,Vũ Gia Hùng,gia.hung1780@example.com,0983459475,TP.HCM,2022-08-14
@@ -1894,7 +1894,7 @@ C01892,Lý Phương An,phuong.an1892@example.com,0935714252,Hà Nội,2024-06-29
 C01893,Hoàng Thanh Uyên,thanh.uyen1893@example.com,0918929511,TP.HCM,2024-03-09
 C01894,Võ Quang Châu,quang.chau1894@example.com,0869585046,Đà Nẵng,2024-09-23
 C01895,Đỗ Thị Lan,thi.lan1895@example.com,0868885075,Hà Nội,2023-08-21
-C01896,Bùi Thanh Tú,thanh.tu1896@example.com,0902615576,TP.HCM,2022-12-08
+C01896,Bùi Thanh Tú,thanh.tu1896@example.com,0902615576,Hồ Chí Minh,2022-12-08
 C01897,Đỗ Gia Trang,gia.trang1897@example.com,0970392726,TP.HCM,2023-08-05
 C01898,Lý Thu Sơn,thu.son1898@example.com,0982209515,Hà Nội,2022-09-10
 C01899,Phạm Quang Lan,quang.lan1899@example.com,0911856109,TP.HCM,2023-01-01
@@ -1992,7 +1992,7 @@ C01990,Huỳnh Gia An,gia.an1990@example.com,0918701033,Hà Nội,2024-08-20
 C01991,Trần Văn Lan,van.lan1991@example.com,0864917143,Hà Nội,2024-04-29
 C01992,Huỳnh Quang Hương,quang.huong1992@example.com,0918700658,Đà Nẵng,2023-01-07
 C01993,Đỗ Phương Hạnh,phuong.hanh1993@example.com,0910502983,TP.HCM,2023-09-19
-C01994,Hồ Bảo Quỳnh,bao.quynh1994@example.com,0935386706,Hà Nội,2022-02-22
+C01994,Hồ Bảo Quỳnh,bao.quynh1994@example.com,0935386706,ha noi,2022-02-22
 C01995,Bùi Văn Tuấn,van.tuan1995@example.com,0902421636,Đà Nẵng,2022-04-06
 C01996,Hồ Anh Vy,anh.vy1996@example.com,0912653695,Hà Nội,2023-12-16
 C01997,Vũ Thị Thảo,thi.thao1997@example.com,0901885936,Đà Nẵng,2024-08-09
