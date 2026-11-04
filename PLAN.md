@@ -229,7 +229,7 @@ Mỗi bước xử lý một cell.
   - File: `notebooks/06_validation.py`
   - Kiểm chứng: `python local/run_local.py --clean` exit code 0.
 
-- [ ] **37. Kiểm tra toàn pipeline**
+- [x] **37. Kiểm tra toàn pipeline**
   - Việc: chạy chế độ `--twice` trọn vẹn; sửa mọi vi phạm API cấm.
   - File: `notebooks/*.py`, `local/*.py`
   - Kiểm chứng: `python local/run_local.py --clean --twice` exit code 0; `grep -nE 'sparkContext|\.rdd\b|\.cache\(|\.persist\(|COPY INTO|cloudFiles|import dlt' notebooks/*.py local/*.py` không ra dòng nào.
