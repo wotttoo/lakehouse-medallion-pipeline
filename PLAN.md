@@ -67,7 +67,7 @@ Task 2–11, 16–18, 19–28, 29–32 không song song được vì cùng sửa
   - File: `data_generator/generate_data.py`, `data/raw/stores.csv`, `data/raw/customers*.csv`, `data/raw/products.jsonl`
   - Kiểm chứng: `grep -cE 'HN|Ha Noi|Sài Gòn|HCM|Da Nang' data/raw/customers.csv` lớn hơn 0; `grep -c '"category": " ' data/raw/products.jsonl` lớn hơn 0.
 
-- [ ] **7. Cài lỗi E02, E03, E10 trên orders**
+- [x] **7. Cài lỗi E02, E03, E10 trên orders**
   - Việc: trùng `order_id` trong cùng file (~1%); `order_date` lẫn 3 định dạng; `customer_id` rỗng (~5%).
   - File: `data_generator/generate_data.py`, `data/raw/orders_2025_MM.csv`
   - Kiểm chứng: với `data/raw/orders_2025_03.csv`, `cut -d, -f1 | sort | uniq -d | wc -l` lớn hơn 0; `cut -d, -f2 | grep -cE '^[0-9]{2}/'` lớn hơn 0; `awk -F, 'NR>1 && $3==""' | wc -l` lớn hơn 0.

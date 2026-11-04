@@ -147,6 +147,40 @@ def inject_e06(rng, products):
     return len(picked)
 
 
+E02_RATE = 0.01   # dong trung order_id trong cung file
+E03_RATE = 0.03   # order_date sai dinh dang chuan
+
+
+def free_orders(orders):
+    # don chua mang loi nao (moi dong chi mang mot loi)
+    return [o for o in orders if "_err" not in o]
+
+
+def inject_e02(rng, orders):
+    picked = rng.sample(free_orders(orders), round(len(orders) * E02_RATE))
+    for o in picked:
+        o["_err"] = "E02"
+        o["_copies"] = 2  # ghi 2 dong y het nhau trong cung file
+    return len(picked)
+
+
+def inject_e03(rng, orders):
+    picked = rng.sample(free_orders(orders), round(len(orders) * E03_RATE))
+    for o in picked:
+        o["_err"] = "E03"
+        d = o["order_date"]
+        if rng.random() < 0.5:
+            o["order_date_raw"] = d.strftime("%d/%m/%Y")
+        else:
+            o["order_date_raw"] = d.strftime("%Y/%m/%d")
+    return len(picked)
+
+
+def count_e10(orders):
+    # khach vang lai da sinh san trong du lieu sach, o day chi dem
+    return sum(1 for o in orders if o["customer_id"] == "")
+
+
 # Danh muc chuan -> (mat hang mau, khoang gia VND)
 CATEGORIES = {
     "Đồ Uống": (["Nước suối", "Trà xanh", "Cà phê sữa lon", "Nước ngọt có ga",
@@ -336,6 +370,9 @@ def main():
     errors = {}
     errors["E05"] = inject_e05(rng, stores, customers, customers_update)
     errors["E06"] = inject_e06(rng, products)
+    errors["E02"] = inject_e02(rng, orders)
+    errors["E03"] = inject_e03(rng, orders)
+    errors["E10"] = count_e10(orders)
 
     # 3. Ghi file nguon
     write_csv(
