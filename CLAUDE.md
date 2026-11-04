@@ -49,7 +49,8 @@ data/raw/, data/_expected/    dữ liệu nguồn, expected_counts.json
 notebooks/                    bản solution 00_config -> 06_validation
 notebooks_student/            bản có TODO, làm sau khi solution pass
 sql/business_questions.sql    5 truy vấn nghiệp vụ
-local/run_local.py            chạy toàn pipeline ở local bằng exec
+local/run_local.py            chạy toàn pipeline ở local bằng exec (--clean, --twice, --until NN)
+local/check_layer.py          so số dòng bảng với expected_counts.json theo tiền tố, ví dụ `bronze`, `silver.orders`
 ```
 
 ## Quy ước code

@@ -109,7 +109,7 @@ Task 2–11, 16–18, 19–28, 29–32 không song song được vì cùng sửa
   - File: `local/run_local.py`
   - Kiểm chứng: `python local/run_local.py --clean --until 01` exit code 0; `data/raw` còn nguyên.
 
-- [ ] **15. `local/check_layer.py`** (nhóm A)
+- [x] **15. `local/check_layer.py`** (nhóm A)
   - Việc: so số dòng bảng thật với `tables` trong `expected_counts.json`, lọc theo tiền tố tên bảng, exit khác 0 khi lệch. Cập nhật mục "Cấu trúc thư mục" trong `CLAUDE.md`.
   - File: `local/check_layer.py`, `CLAUDE.md`
   - Kiểm chứng: `python local/check_layer.py bronze; echo $?` in khác 0 khi Bronze chưa tồn tại, không crash bằng traceback.
