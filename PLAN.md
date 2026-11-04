@@ -209,7 +209,7 @@ Mỗi bước xử lý một cell.
 
 ### Giai đoạn 6: Serving và Validation
 
-- [ ] **33. `sql/business_questions.sql`** (nhóm B, luồng 1)
+- [x] **33. `sql/business_questions.sql`** (nhóm B, luồng 1)
   - Việc: 5 truy vấn trên Gold; câu 5 loại khách vãng lai.
   - File: `sql/business_questions.sql`
   - Kiểm chứng: `grep -c '^-- Q[1-5]' sql/business_questions.sql` ra 5.
