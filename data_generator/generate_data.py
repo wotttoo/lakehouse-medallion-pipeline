@@ -105,6 +105,63 @@ def customer_rows(customers):
     return [[c[k] for k in CUSTOMER_HEADER] for c in customers]
 
 
+# Danh muc chuan -> (mat hang mau, khoang gia VND)
+CATEGORIES = {
+    "Đồ Uống": (["Nước suối", "Trà xanh", "Cà phê sữa lon", "Nước ngọt có ga",
+                 "Nước cam ép", "Trà sữa đóng chai", "Nước tăng lực"], (6000, 30000)),
+    "Bánh Kẹo": (["Bánh quy bơ", "Kẹo dẻo", "Bánh gạo", "Socola thanh",
+                  "Bánh bông lan", "Snack khoai tây"], (5000, 60000)),
+    "Mì Gói": (["Mì tôm chua cay", "Phở ăn liền", "Miến trộn", "Hủ tiếu ăn liền",
+                "Mì xào khô"], (4000, 15000)),
+    "Sữa": (["Sữa tươi tiệt trùng", "Sữa chua uống", "Sữa đặc", "Sữa hạt",
+             "Sữa chua ăn"], (7000, 45000)),
+    "Gia Vị": (["Nước mắm", "Dầu ăn", "Hạt nêm", "Tương ớt", "Nước tương",
+                "Muối tiêu"], (10000, 80000)),
+    "Đồ Gia Dụng": (["Khăn giấy", "Nước rửa chén", "Túi rác", "Bột giặt",
+                     "Nước lau sàn"], (15000, 120000)),
+    "Chăm Sóc Cá Nhân": (["Dầu gội", "Sữa tắm", "Kem đánh răng", "Bàn chải",
+                          "Khăn ướt"], (12000, 150000)),
+    "Đồ Đông Lạnh": (["Xúc xích", "Há cảo", "Chả giò", "Kem que",
+                      "Cá viên"], (20000, 90000)),
+}
+BRANDS = ["Sao Mai", "Hồng Hà", "An Phát", "Bình Minh", "Thiên Long",
+          "Phú Quý", "Việt Xanh", "Hương Quê"]
+SIZES = ["nhỏ", "vừa", "lớn", "gói gia đình", "combo 3"]
+N_PRODUCTS = 150
+
+
+def gen_products(rng):
+    cat_names = list(CATEGORIES)
+    seen = set()
+    products = []
+    while len(products) < N_PRODUCTS:
+        cat = rng.choice(cat_names)
+        items, (lo, hi) = CATEGORIES[cat]
+        name = f"{rng.choice(items)} {rng.choice(BRANDS)} {rng.choice(SIZES)}"
+        if name in seen:
+            continue
+        seen.add(name)
+        products.append({
+            "product_id": f"P{len(products) + 1:03d}",
+            "product_name": name,
+            "category": cat,
+            "price": {"amount": rng.randrange(lo, hi + 1, 500), "currency": "VND"},
+            "is_active": rng.random() < 0.95,
+        })
+    # Trong so ban long-tail: thu hang ngau nhien, trong so ~ 1/rank^1.1
+    ranks = list(range(1, N_PRODUCTS + 1))
+    rng.shuffle(ranks)
+    for p, r in zip(products, ranks):
+        p["_weight"] = 1.0 / (r ** 1.1)
+    return products
+
+
+def write_jsonl(path, records):
+    with open(path, "w", encoding="utf-8", newline="\n") as f:
+        for r in records:
+            f.write(json.dumps(r, ensure_ascii=False) + "\n")
+
+
 def write_csv(path, header, rows):
     # lineterminator co dinh de output tat dinh tren moi he dieu hanh
     with open(path, "w", encoding="utf-8", newline="") as f:
@@ -143,6 +200,10 @@ def main():
     write_csv(raw_dir / "customers.csv", CUSTOMER_HEADER, customer_rows(customers))
     write_csv(raw_dir / "customers_update_2025_12.csv", CUSTOMER_HEADER,
               customer_rows(customers_update))
+
+    products = gen_products(rng)
+    write_jsonl(raw_dir / "products.jsonl",
+                [{k: v for k, v in p.items() if not k.startswith("_")} for p in products])
     print(f"Da ghi du lieu vao {raw_dir}")
 
 

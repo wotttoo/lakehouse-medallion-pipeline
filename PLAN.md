@@ -52,7 +52,7 @@ Task 2–11, 16–18, 19–28, 29–32 không song song được vì cùng sửa
   - File: `data_generator/generate_data.py`, `data/raw/customers.csv`, `data/raw/customers_update_2025_12.csv`
   - Kiểm chứng: `wc -l data/raw/customers*.csv` ra khoảng 2.001 và 151 dòng.
 
-- [ ] **4. Sinh `products.jsonl`**
+- [x] **4. Sinh `products.jsonl`**
   - Việc: ~150 sản phẩm có `price: {amount, currency}`, `is_active`, và trọng số bán long-tail.
   - File: `data_generator/generate_data.py`, `data/raw/products.jsonl`
   - Kiểm chứng: `python -c "import json; r=[json.loads(l) for l in open('data/raw/products.jsonl',encoding='utf-8')]; print(len(r), r[0]['price'])"` in khoảng 150 và dict có `amount`, `currency`.

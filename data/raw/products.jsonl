@@ -1,0 +1,150 @@
+{"product_id": "P001", "product_name": "Chả giò Sao Mai gói gia đình", "category": "Đồ Đông Lạnh", "price": {"amount": 25000, "currency": "VND"}, "is_active": true}
+{"product_id": "P002", "product_name": "Há cảo Bình Minh nhỏ", "category": "Đồ Đông Lạnh", "price": {"amount": 34500, "currency": "VND"}, "is_active": true}
+{"product_id": "P003", "product_name": "Xúc xích An Phát combo 3", "category": "Đồ Đông Lạnh", "price": {"amount": 61500, "currency": "VND"}, "is_active": true}
+{"product_id": "P004", "product_name": "Muối tiêu Việt Xanh lớn", "category": "Gia Vị", "price": {"amount": 78500, "currency": "VND"}, "is_active": true}
+{"product_id": "P005", "product_name": "Nước mắm Hồng Hà gói gia đình", "category": "Gia Vị", "price": {"amount": 35500, "currency": "VND"}, "is_active": false}
+{"product_id": "P006", "product_name": "Há cảo An Phát combo 3", "category": "Đồ Đông Lạnh", "price": {"amount": 24500, "currency": "VND"}, "is_active": true}
+{"product_id": "P007", "product_name": "Bánh quy bơ Bình Minh nhỏ", "category": "Bánh Kẹo", "price": {"amount": 58000, "currency": "VND"}, "is_active": true}
+{"product_id": "P008", "product_name": "Snack khoai tây Hồng Hà vừa", "category": "Bánh Kẹo", "price": {"amount": 32500, "currency": "VND"}, "is_active": true}
+{"product_id": "P009", "product_name": "Há cảo Hương Quê combo 3", "category": "Đồ Đông Lạnh", "price": {"amount": 25000, "currency": "VND"}, "is_active": true}
+{"product_id": "P010", "product_name": "Sữa chua uống Phú Quý nhỏ", "category": "Sữa", "price": {"amount": 43000, "currency": "VND"}, "is_active": true}
+{"product_id": "P011", "product_name": "Miến trộn Thiên Long vừa", "category": "Mì Gói", "price": {"amount": 9500, "currency": "VND"}, "is_active": true}
+{"product_id": "P012", "product_name": "Nước ngọt có ga Việt Xanh vừa", "category": "Đồ Uống", "price": {"amount": 15000, "currency": "VND"}, "is_active": true}
+{"product_id": "P013", "product_name": "Sữa chua uống Bình Minh lớn", "category": "Sữa", "price": {"amount": 35000, "currency": "VND"}, "is_active": true}
+{"product_id": "P014", "product_name": "Xúc xích Bình Minh combo 3", "category": "Đồ Đông Lạnh", "price": {"amount": 87500, "currency": "VND"}, "is_active": true}
+{"product_id": "P015", "product_name": "Phở ăn liền Phú Quý nhỏ", "category": "Mì Gói", "price": {"amount": 5500, "currency": "VND"}, "is_active": true}
+{"product_id": "P016", "product_name": "Khăn ướt Sao Mai combo 3", "category": "Chăm Sóc Cá Nhân", "price": {"amount": 55000, "currency": "VND"}, "is_active": true}
+{"product_id": "P017", "product_name": "Túi rác Sao Mai vừa", "category": "Đồ Gia Dụng", "price": {"amount": 28000, "currency": "VND"}, "is_active": true}
+{"product_id": "P018", "product_name": "Nước ngọt có ga Sao Mai combo 3", "category": "Đồ Uống", "price": {"amount": 7500, "currency": "VND"}, "is_active": true}
+{"product_id": "P019", "product_name": "Kẹo dẻo Sao Mai combo 3", "category": "Bánh Kẹo", "price": {"amount": 39500, "currency": "VND"}, "is_active": true}
+{"product_id": "P020", "product_name": "Cá viên Việt Xanh lớn", "category": "Đồ Đông Lạnh", "price": {"amount": 69500, "currency": "VND"}, "is_active": true}
+{"product_id": "P021", "product_name": "Sữa hạt Thiên Long lớn", "category": "Sữa", "price": {"amount": 36000, "currency": "VND"}, "is_active": true}
+{"product_id": "P022", "product_name": "Hủ tiếu ăn liền Phú Quý vừa", "category": "Mì Gói", "price": {"amount": 6000, "currency": "VND"}, "is_active": true}
+{"product_id": "P023", "product_name": "Hủ tiếu ăn liền Thiên Long vừa", "category": "Mì Gói", "price": {"amount": 9500, "currency": "VND"}, "is_active": true}
+{"product_id": "P024", "product_name": "Kem đánh răng An Phát nhỏ", "category": "Chăm Sóc Cá Nhân", "price": {"amount": 129500, "currency": "VND"}, "is_active": true}
+{"product_id": "P025", "product_name": "Sữa hạt An Phát lớn", "category": "Sữa", "price": {"amount": 20000, "currency": "VND"}, "is_active": true}
+{"product_id": "P026", "product_name": "Bàn chải Hương Quê gói gia đình", "category": "Chăm Sóc Cá Nhân", "price": {"amount": 125500, "currency": "VND"}, "is_active": false}
+{"product_id": "P027", "product_name": "Chả giò Phú Quý lớn", "category": "Đồ Đông Lạnh", "price": {"amount": 71000, "currency": "VND"}, "is_active": true}
+{"product_id": "P028", "product_name": "Sữa chua uống Bình Minh vừa", "category": "Sữa", "price": {"amount": 43000, "currency": "VND"}, "is_active": true}
+{"product_id": "P029", "product_name": "Bột giặt Việt Xanh lớn", "category": "Đồ Gia Dụng", "price": {"amount": 97000, "currency": "VND"}, "is_active": true}
+{"product_id": "P030", "product_name": "Sữa tắm Hương Quê nhỏ", "category": "Chăm Sóc Cá Nhân", "price": {"amount": 127500, "currency": "VND"}, "is_active": true}
+{"product_id": "P031", "product_name": "Dầu gội Bình Minh vừa", "category": "Chăm Sóc Cá Nhân", "price": {"amount": 98000, "currency": "VND"}, "is_active": true}
+{"product_id": "P032", "product_name": "Hủ tiếu ăn liền Việt Xanh vừa", "category": "Mì Gói", "price": {"amount": 11000, "currency": "VND"}, "is_active": true}
+{"product_id": "P033", "product_name": "Hủ tiếu ăn liền Bình Minh vừa", "category": "Mì Gói", "price": {"amount": 10500, "currency": "VND"}, "is_active": true}
+{"product_id": "P034", "product_name": "Sữa chua uống Hương Quê lớn", "category": "Sữa", "price": {"amount": 40500, "currency": "VND"}, "is_active": true}
+{"product_id": "P035", "product_name": "Trà sữa đóng chai Hồng Hà nhỏ", "category": "Đồ Uống", "price": {"amount": 8500, "currency": "VND"}, "is_active": true}
+{"product_id": "P036", "product_name": "Cà phê sữa lon Hồng Hà lớn", "category": "Đồ Uống", "price": {"amount": 17000, "currency": "VND"}, "is_active": true}
+{"product_id": "P037", "product_name": "Phở ăn liền Thiên Long nhỏ", "category": "Mì Gói", "price": {"amount": 9500, "currency": "VND"}, "is_active": true}
+{"product_id": "P038", "product_name": "Nước lau sàn Hương Quê gói gia đình", "category": "Đồ Gia Dụng", "price": {"amount": 58000, "currency": "VND"}, "is_active": true}
+{"product_id": "P039", "product_name": "Hạt nêm Hồng Hà combo 3", "category": "Gia Vị", "price": {"amount": 30000, "currency": "VND"}, "is_active": true}
+{"product_id": "P040", "product_name": "Phở ăn liền Việt Xanh nhỏ", "category": "Mì Gói", "price": {"amount": 12500, "currency": "VND"}, "is_active": true}
+{"product_id": "P041", "product_name": "Sữa tắm Hương Quê lớn", "category": "Chăm Sóc Cá Nhân", "price": {"amount": 75500, "currency": "VND"}, "is_active": false}
+{"product_id": "P042", "product_name": "Hủ tiếu ăn liền Hồng Hà nhỏ", "category": "Mì Gói", "price": {"amount": 6000, "currency": "VND"}, "is_active": true}
+{"product_id": "P043", "product_name": "Kem que Hương Quê vừa", "category": "Đồ Đông Lạnh", "price": {"amount": 22500, "currency": "VND"}, "is_active": true}
+{"product_id": "P044", "product_name": "Bột giặt An Phát gói gia đình", "category": "Đồ Gia Dụng", "price": {"amount": 17500, "currency": "VND"}, "is_active": false}
+{"product_id": "P045", "product_name": "Túi rác Hồng Hà lớn", "category": "Đồ Gia Dụng", "price": {"amount": 23500, "currency": "VND"}, "is_active": true}
+{"product_id": "P046", "product_name": "Muối tiêu Việt Xanh vừa", "category": "Gia Vị", "price": {"amount": 24000, "currency": "VND"}, "is_active": false}
+{"product_id": "P047", "product_name": "Sữa đặc Thiên Long nhỏ", "category": "Sữa", "price": {"amount": 29500, "currency": "VND"}, "is_active": true}
+{"product_id": "P048", "product_name": "Xúc xích Việt Xanh vừa", "category": "Đồ Đông Lạnh", "price": {"amount": 66500, "currency": "VND"}, "is_active": true}
+{"product_id": "P049", "product_name": "Sữa chua ăn Thiên Long combo 3", "category": "Sữa", "price": {"amount": 8500, "currency": "VND"}, "is_active": true}
+{"product_id": "P050", "product_name": "Mì tôm chua cay Bình Minh lớn", "category": "Mì Gói", "price": {"amount": 8000, "currency": "VND"}, "is_active": true}
+{"product_id": "P051", "product_name": "Kem đánh răng Sao Mai lớn", "category": "Chăm Sóc Cá Nhân", "price": {"amount": 129000, "currency": "VND"}, "is_active": true}
+{"product_id": "P052", "product_name": "Nước lau sàn Sao Mai vừa", "category": "Đồ Gia Dụng", "price": {"amount": 94500, "currency": "VND"}, "is_active": true}
+{"product_id": "P053", "product_name": "Cà phê sữa lon Việt Xanh vừa", "category": "Đồ Uống", "price": {"amount": 21000, "currency": "VND"}, "is_active": true}
+{"product_id": "P054", "product_name": "Trà sữa đóng chai Thiên Long gói gia đình", "category": "Đồ Uống", "price": {"amount": 16500, "currency": "VND"}, "is_active": true}
+{"product_id": "P055", "product_name": "Bàn chải Phú Quý vừa", "category": "Chăm Sóc Cá Nhân", "price": {"amount": 100500, "currency": "VND"}, "is_active": true}
+{"product_id": "P056", "product_name": "Socola thanh Hồng Hà lớn", "category": "Bánh Kẹo", "price": {"amount": 60000, "currency": "VND"}, "is_active": true}
+{"product_id": "P057", "product_name": "Bánh quy bơ An Phát nhỏ", "category": "Bánh Kẹo", "price": {"amount": 20500, "currency": "VND"}, "is_active": true}
+{"product_id": "P058", "product_name": "Khăn giấy An Phát combo 3", "category": "Đồ Gia Dụng", "price": {"amount": 117500, "currency": "VND"}, "is_active": true}
+{"product_id": "P059", "product_name": "Bánh quy bơ Sao Mai nhỏ", "category": "Bánh Kẹo", "price": {"amount": 52000, "currency": "VND"}, "is_active": true}
+{"product_id": "P060", "product_name": "Kẹo dẻo Hương Quê lớn", "category": "Bánh Kẹo", "price": {"amount": 55000, "currency": "VND"}, "is_active": true}
+{"product_id": "P061", "product_name": "Bánh quy bơ An Phát vừa", "category": "Bánh Kẹo", "price": {"amount": 52500, "currency": "VND"}, "is_active": true}
+{"product_id": "P062", "product_name": "Mì tôm chua cay Hồng Hà nhỏ", "category": "Mì Gói", "price": {"amount": 10500, "currency": "VND"}, "is_active": true}
+{"product_id": "P063", "product_name": "Sữa chua uống Sao Mai nhỏ", "category": "Sữa", "price": {"amount": 31500, "currency": "VND"}, "is_active": true}
+{"product_id": "P064", "product_name": "Sữa hạt Bình Minh gói gia đình", "category": "Sữa", "price": {"amount": 18500, "currency": "VND"}, "is_active": true}
+{"product_id": "P065", "product_name": "Nước ngọt có ga An Phát combo 3", "category": "Đồ Uống", "price": {"amount": 6000, "currency": "VND"}, "is_active": true}
+{"product_id": "P066", "product_name": "Sữa đặc An Phát combo 3", "category": "Sữa", "price": {"amount": 43500, "currency": "VND"}, "is_active": false}
+{"product_id": "P067", "product_name": "Miến trộn Bình Minh vừa", "category": "Mì Gói", "price": {"amount": 10000, "currency": "VND"}, "is_active": true}
+{"product_id": "P068", "product_name": "Nước tương Việt Xanh combo 3", "category": "Gia Vị", "price": {"amount": 46500, "currency": "VND"}, "is_active": true}
+{"product_id": "P069", "product_name": "Hạt nêm Bình Minh combo 3", "category": "Gia Vị", "price": {"amount": 10500, "currency": "VND"}, "is_active": true}
+{"product_id": "P070", "product_name": "Hạt nêm An Phát nhỏ", "category": "Gia Vị", "price": {"amount": 17500, "currency": "VND"}, "is_active": true}
+{"product_id": "P071", "product_name": "Khăn giấy Việt Xanh nhỏ", "category": "Đồ Gia Dụng", "price": {"amount": 101000, "currency": "VND"}, "is_active": true}
+{"product_id": "P072", "product_name": "Xúc xích Hồng Hà lớn", "category": "Đồ Đông Lạnh", "price": {"amount": 66000, "currency": "VND"}, "is_active": true}
+{"product_id": "P073", "product_name": "Bánh bông lan Thiên Long lớn", "category": "Bánh Kẹo", "price": {"amount": 33500, "currency": "VND"}, "is_active": true}
+{"product_id": "P074", "product_name": "Chả giò Hương Quê lớn", "category": "Đồ Đông Lạnh", "price": {"amount": 82500, "currency": "VND"}, "is_active": true}
+{"product_id": "P075", "product_name": "Sữa chua uống An Phát nhỏ", "category": "Sữa", "price": {"amount": 29500, "currency": "VND"}, "is_active": true}
+{"product_id": "P076", "product_name": "Chả giò Việt Xanh gói gia đình", "category": "Đồ Đông Lạnh", "price": {"amount": 79000, "currency": "VND"}, "is_active": true}
+{"product_id": "P077", "product_name": "Hủ tiếu ăn liền Việt Xanh nhỏ", "category": "Mì Gói", "price": {"amount": 6000, "currency": "VND"}, "is_active": true}
+{"product_id": "P078", "product_name": "Sữa tắm Việt Xanh lớn", "category": "Chăm Sóc Cá Nhân", "price": {"amount": 15500, "currency": "VND"}, "is_active": true}
+{"product_id": "P079", "product_name": "Phở ăn liền An Phát vừa", "category": "Mì Gói", "price": {"amount": 5500, "currency": "VND"}, "is_active": true}
+{"product_id": "P080", "product_name": "Há cảo Thiên Long lớn", "category": "Đồ Đông Lạnh", "price": {"amount": 45000, "currency": "VND"}, "is_active": true}
+{"product_id": "P081", "product_name": "Sữa tắm Thiên Long combo 3", "category": "Chăm Sóc Cá Nhân", "price": {"amount": 83000, "currency": "VND"}, "is_active": true}
+{"product_id": "P082", "product_name": "Cá viên Hương Quê gói gia đình", "category": "Đồ Đông Lạnh", "price": {"amount": 75500, "currency": "VND"}, "is_active": true}
+{"product_id": "P083", "product_name": "Hủ tiếu ăn liền Sao Mai lớn", "category": "Mì Gói", "price": {"amount": 5500, "currency": "VND"}, "is_active": true}
+{"product_id": "P084", "product_name": "Bột giặt Thiên Long vừa", "category": "Đồ Gia Dụng", "price": {"amount": 45000, "currency": "VND"}, "is_active": true}
+{"product_id": "P085", "product_name": "Há cảo Việt Xanh gói gia đình", "category": "Đồ Đông Lạnh", "price": {"amount": 21500, "currency": "VND"}, "is_active": false}
+{"product_id": "P086", "product_name": "Miến trộn Thiên Long combo 3", "category": "Mì Gói", "price": {"amount": 10500, "currency": "VND"}, "is_active": true}
+{"product_id": "P087", "product_name": "Mì xào khô Thiên Long lớn", "category": "Mì Gói", "price": {"amount": 9500, "currency": "VND"}, "is_active": true}
+{"product_id": "P088", "product_name": "Miến trộn Hương Quê nhỏ", "category": "Mì Gói", "price": {"amount": 4000, "currency": "VND"}, "is_active": true}
+{"product_id": "P089", "product_name": "Sữa tắm Bình Minh lớn", "category": "Chăm Sóc Cá Nhân", "price": {"amount": 71500, "currency": "VND"}, "is_active": true}
+{"product_id": "P090", "product_name": "Bột giặt Thiên Long combo 3", "category": "Đồ Gia Dụng", "price": {"amount": 58500, "currency": "VND"}, "is_active": true}
+{"product_id": "P091", "product_name": "Nước rửa chén An Phát lớn", "category": "Đồ Gia Dụng", "price": {"amount": 115000, "currency": "VND"}, "is_active": true}
+{"product_id": "P092", "product_name": "Sữa chua ăn Bình Minh vừa", "category": "Sữa", "price": {"amount": 38000, "currency": "VND"}, "is_active": true}
+{"product_id": "P093", "product_name": "Cà phê sữa lon Hồng Hà gói gia đình", "category": "Đồ Uống", "price": {"amount": 30000, "currency": "VND"}, "is_active": true}
+{"product_id": "P094", "product_name": "Khăn giấy Hương Quê gói gia đình", "category": "Đồ Gia Dụng", "price": {"amount": 92000, "currency": "VND"}, "is_active": true}
+{"product_id": "P095", "product_name": "Nước mắm Hương Quê gói gia đình", "category": "Gia Vị", "price": {"amount": 34500, "currency": "VND"}, "is_active": true}
+{"product_id": "P096", "product_name": "Muối tiêu An Phát lớn", "category": "Gia Vị", "price": {"amount": 17500, "currency": "VND"}, "is_active": true}
+{"product_id": "P097", "product_name": "Sữa tươi tiệt trùng Phú Quý lớn", "category": "Sữa", "price": {"amount": 37500, "currency": "VND"}, "is_active": true}
+{"product_id": "P098", "product_name": "Hạt nêm Hương Quê lớn", "category": "Gia Vị", "price": {"amount": 78500, "currency": "VND"}, "is_active": true}
+{"product_id": "P099", "product_name": "Sữa chua ăn Hồng Hà lớn", "category": "Sữa", "price": {"amount": 10500, "currency": "VND"}, "is_active": true}
+{"product_id": "P100", "product_name": "Sữa chua ăn Thiên Long vừa", "category": "Sữa", "price": {"amount": 31000, "currency": "VND"}, "is_active": true}
+{"product_id": "P101", "product_name": "Cà phê sữa lon Thiên Long vừa", "category": "Đồ Uống", "price": {"amount": 10500, "currency": "VND"}, "is_active": true}
+{"product_id": "P102", "product_name": "Trà sữa đóng chai Việt Xanh nhỏ", "category": "Đồ Uống", "price": {"amount": 17500, "currency": "VND"}, "is_active": true}
+{"product_id": "P103", "product_name": "Hủ tiếu ăn liền Việt Xanh combo 3", "category": "Mì Gói", "price": {"amount": 6500, "currency": "VND"}, "is_active": true}
+{"product_id": "P104", "product_name": "Khăn giấy Thiên Long gói gia đình", "category": "Đồ Gia Dụng", "price": {"amount": 50000, "currency": "VND"}, "is_active": true}
+{"product_id": "P105", "product_name": "Chả giò An Phát combo 3", "category": "Đồ Đông Lạnh", "price": {"amount": 36000, "currency": "VND"}, "is_active": true}
+{"product_id": "P106", "product_name": "Nước suối Sao Mai lớn", "category": "Đồ Uống", "price": {"amount": 23500, "currency": "VND"}, "is_active": true}
+{"product_id": "P107", "product_name": "Miến trộn Việt Xanh combo 3", "category": "Mì Gói", "price": {"amount": 4000, "currency": "VND"}, "is_active": true}
+{"product_id": "P108", "product_name": "Bột giặt An Phát lớn", "category": "Đồ Gia Dụng", "price": {"amount": 93000, "currency": "VND"}, "is_active": true}
+{"product_id": "P109", "product_name": "Trà sữa đóng chai Thiên Long lớn", "category": "Đồ Uống", "price": {"amount": 24000, "currency": "VND"}, "is_active": true}
+{"product_id": "P110", "product_name": "Nước cam ép Sao Mai vừa", "category": "Đồ Uống", "price": {"amount": 21500, "currency": "VND"}, "is_active": true}
+{"product_id": "P111", "product_name": "Kẹo dẻo An Phát nhỏ", "category": "Bánh Kẹo", "price": {"amount": 38000, "currency": "VND"}, "is_active": true}
+{"product_id": "P112", "product_name": "Khăn giấy Việt Xanh lớn", "category": "Đồ Gia Dụng", "price": {"amount": 111000, "currency": "VND"}, "is_active": true}
+{"product_id": "P113", "product_name": "Bàn chải An Phát combo 3", "category": "Chăm Sóc Cá Nhân", "price": {"amount": 34500, "currency": "VND"}, "is_active": true}
+{"product_id": "P114", "product_name": "Há cảo Hồng Hà lớn", "category": "Đồ Đông Lạnh", "price": {"amount": 49000, "currency": "VND"}, "is_active": true}
+{"product_id": "P115", "product_name": "Nước suối Bình Minh gói gia đình", "category": "Đồ Uống", "price": {"amount": 7000, "currency": "VND"}, "is_active": true}
+{"product_id": "P116", "product_name": "Sữa chua uống An Phát combo 3", "category": "Sữa", "price": {"amount": 27000, "currency": "VND"}, "is_active": true}
+{"product_id": "P117", "product_name": "Dầu gội Thiên Long gói gia đình", "category": "Chăm Sóc Cá Nhân", "price": {"amount": 18000, "currency": "VND"}, "is_active": true}
+{"product_id": "P118", "product_name": "Khăn ướt Hồng Hà nhỏ", "category": "Chăm Sóc Cá Nhân", "price": {"amount": 63000, "currency": "VND"}, "is_active": true}
+{"product_id": "P119", "product_name": "Sữa chua uống Hương Quê nhỏ", "category": "Sữa", "price": {"amount": 29000, "currency": "VND"}, "is_active": true}
+{"product_id": "P120", "product_name": "Nước lau sàn An Phát gói gia đình", "category": "Đồ Gia Dụng", "price": {"amount": 42000, "currency": "VND"}, "is_active": true}
+{"product_id": "P121", "product_name": "Nước lau sàn Việt Xanh vừa", "category": "Đồ Gia Dụng", "price": {"amount": 40500, "currency": "VND"}, "is_active": true}
+{"product_id": "P122", "product_name": "Hạt nêm Bình Minh lớn", "category": "Gia Vị", "price": {"amount": 43000, "currency": "VND"}, "is_active": true}
+{"product_id": "P123", "product_name": "Tương ớt Sao Mai gói gia đình", "category": "Gia Vị", "price": {"amount": 75500, "currency": "VND"}, "is_active": true}
+{"product_id": "P124", "product_name": "Sữa chua uống Hồng Hà nhỏ", "category": "Sữa", "price": {"amount": 31500, "currency": "VND"}, "is_active": true}
+{"product_id": "P125", "product_name": "Sữa chua uống Thiên Long vừa", "category": "Sữa", "price": {"amount": 44500, "currency": "VND"}, "is_active": true}
+{"product_id": "P126", "product_name": "Bột giặt Sao Mai vừa", "category": "Đồ Gia Dụng", "price": {"amount": 87500, "currency": "VND"}, "is_active": true}
+{"product_id": "P127", "product_name": "Dầu ăn Sao Mai lớn", "category": "Gia Vị", "price": {"amount": 11500, "currency": "VND"}, "is_active": true}
+{"product_id": "P128", "product_name": "Miến trộn Bình Minh gói gia đình", "category": "Mì Gói", "price": {"amount": 10000, "currency": "VND"}, "is_active": true}
+{"product_id": "P129", "product_name": "Kem que An Phát gói gia đình", "category": "Đồ Đông Lạnh", "price": {"amount": 81000, "currency": "VND"}, "is_active": true}
+{"product_id": "P130", "product_name": "Muối tiêu Bình Minh nhỏ", "category": "Gia Vị", "price": {"amount": 23500, "currency": "VND"}, "is_active": true}
+{"product_id": "P131", "product_name": "Nước cam ép Sao Mai nhỏ", "category": "Đồ Uống", "price": {"amount": 14500, "currency": "VND"}, "is_active": true}
+{"product_id": "P132", "product_name": "Tương ớt Việt Xanh combo 3", "category": "Gia Vị", "price": {"amount": 30000, "currency": "VND"}, "is_active": true}
+{"product_id": "P133", "product_name": "Nước rửa chén Bình Minh gói gia đình", "category": "Đồ Gia Dụng", "price": {"amount": 109500, "currency": "VND"}, "is_active": true}
+{"product_id": "P134", "product_name": "Bánh gạo Việt Xanh nhỏ", "category": "Bánh Kẹo", "price": {"amount": 24000, "currency": "VND"}, "is_active": true}
+{"product_id": "P135", "product_name": "Bánh gạo An Phát lớn", "category": "Bánh Kẹo", "price": {"amount": 34000, "currency": "VND"}, "is_active": true}
+{"product_id": "P136", "product_name": "Sữa tươi tiệt trùng Sao Mai gói gia đình", "category": "Sữa", "price": {"amount": 18000, "currency": "VND"}, "is_active": true}
+{"product_id": "P137", "product_name": "Snack khoai tây Bình Minh gói gia đình", "category": "Bánh Kẹo", "price": {"amount": 42000, "currency": "VND"}, "is_active": true}
+{"product_id": "P138", "product_name": "Hạt nêm Sao Mai combo 3", "category": "Gia Vị", "price": {"amount": 71000, "currency": "VND"}, "is_active": true}
+{"product_id": "P139", "product_name": "Phở ăn liền Hồng Hà gói gia đình", "category": "Mì Gói", "price": {"amount": 14500, "currency": "VND"}, "is_active": true}
+{"product_id": "P140", "product_name": "Nước ngọt có ga Việt Xanh gói gia đình", "category": "Đồ Uống", "price": {"amount": 19000, "currency": "VND"}, "is_active": true}
+{"product_id": "P141", "product_name": "Muối tiêu Thiên Long gói gia đình", "category": "Gia Vị", "price": {"amount": 35500, "currency": "VND"}, "is_active": true}
+{"product_id": "P142", "product_name": "Trà sữa đóng chai Thiên Long vừa", "category": "Đồ Uống", "price": {"amount": 13500, "currency": "VND"}, "is_active": true}
+{"product_id": "P143", "product_name": "Trà sữa đóng chai Sao Mai combo 3", "category": "Đồ Uống", "price": {"amount": 19500, "currency": "VND"}, "is_active": true}
+{"product_id": "P144", "product_name": "Há cảo Sao Mai lớn", "category": "Đồ Đông Lạnh", "price": {"amount": 66500, "currency": "VND"}, "is_active": true}
+{"product_id": "P145", "product_name": "Bột giặt Hương Quê combo 3", "category": "Đồ Gia Dụng", "price": {"amount": 35500, "currency": "VND"}, "is_active": true}
+{"product_id": "P146", "product_name": "Nước lau sàn An Phát lớn", "category": "Đồ Gia Dụng", "price": {"amount": 109000, "currency": "VND"}, "is_active": true}
+{"product_id": "P147", "product_name": "Chả giò Thiên Long vừa", "category": "Đồ Đông Lạnh", "price": {"amount": 83000, "currency": "VND"}, "is_active": true}
+{"product_id": "P148", "product_name": "Kem đánh răng Việt Xanh nhỏ", "category": "Chăm Sóc Cá Nhân", "price": {"amount": 76500, "currency": "VND"}, "is_active": true}
+{"product_id": "P149", "product_name": "Túi rác Hương Quê gói gia đình", "category": "Đồ Gia Dụng", "price": {"amount": 111000, "currency": "VND"}, "is_active": true}
+{"product_id": "P150", "product_name": "Mì tôm chua cay Phú Quý combo 3", "category": "Mì Gói", "price": {"amount": 14000, "currency": "VND"}, "is_active": true}
