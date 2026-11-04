@@ -60,6 +60,7 @@ if not IS_DATABRICKS:
                 f"jdbc:derby:;databaseName={os.path.join(_root, 'metastore_db')};create=true")
         .config("spark.sql.shuffle.partitions", "4")
         .config("spark.ui.enabled", "false")
+        .config("spark.ui.showConsoleProgress", "false")
         .config("spark.log.level", "WARN")
         .enableHiveSupport()
     )

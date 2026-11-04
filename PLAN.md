@@ -165,22 +165,22 @@ Mỗi bước xử lý một cell.
   - File: `notebooks/03_silver.py`
   - Kiểm chứng: `python local/run_local.py --clean --until 03 && python local/check_layer.py silver.orders`.
 
-- [ ] **25. Ép kiểu order_items**
+- [x] **25. Ép kiểu order_items**
   - Việc: ép `unit_price` (E04), `quantity`, `discount`; thêm `assert` không dòng nào ép ra null.
   - File: `notebooks/03_silver.py`
   - Kiểm chứng: `python local/run_local.py --clean --until 03` exit code 0.
 
-- [ ] **26. Khử trùng order_items**
+- [x] **26. Khử trùng order_items**
   - Việc: `row_number()` theo `order_id + line_no` (E01).
   - File: `notebooks/03_silver.py`
   - Kiểm chứng: `assert` trong cell: số dòng bằng số khóa phân biệt; `python local/run_local.py --clean --until 03` exit code 0.
 
-- [ ] **27. Quarantine và MERGE order_items**
+- [x] **27. Quarantine và MERGE order_items**
   - Việc: tách E07, E08 và toàn bộ item của đơn E09 sang `silver.order_items_rejected`; MERGE phần hợp lệ vào `silver.order_items`.
   - File: `notebooks/03_silver.py`
   - Kiểm chứng: `python local/run_local.py --clean --until 03 && python local/check_layer.py silver.order_items`.
 
-- [ ] **28. In số dòng và xác nhận idempotent Silver**
+- [x] **28. In số dòng và xác nhận idempotent Silver**
   - Việc: cell cuối in số dòng mỗi bảng.
   - File: `notebooks/03_silver.py`
   - Kiểm chứng: `python local/run_local.py --clean --until 03 --twice && python local/check_layer.py silver`.

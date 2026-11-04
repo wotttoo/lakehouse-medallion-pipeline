@@ -267,3 +267,105 @@ orders_valid = orders.filter("reject_reason IS NULL").drop("reject_reason")
 
 overwrite(orders_rejected, "orders_rejected")
 merge_into(orders_valid, "orders", ["order_id"])
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ## `silver.order_items`
+# MAGIC
+# MAGIC ### Bước 1 · Ép kiểu (E04)
+# MAGIC
+# MAGIC Một phần dòng có `unit_price` dạng `"25.000"` (dấu chấm ngăn nghìn). Nếu ép thẳng sang số sẽ ra NULL
+# MAGIC (hoặc tệ hơn, ra `25`). Ta bỏ dấu chấm trước rồi mới ép. Tiền VND không có phần lẻ nên dùng kiểu `bigint`.
+# MAGIC `try_cast` trả về NULL thay vì báo lỗi, rồi `assert` bảo đảm không dòng nào ép hỏng.
+
+# COMMAND ----------
+
+items = trim_strings(to_snake_case(spark.table(tbl("bronze", "order_items"))))
+items = (
+    items
+    .withColumn("line_no", F.col("line_no").try_cast("int"))
+    .withColumn("quantity", F.col("quantity").try_cast("int"))
+    .withColumn("unit_price", F.regexp_replace("unit_price", r"\.", "").try_cast("bigint"))
+    .withColumn("discount", F.col("discount").try_cast("bigint"))
+)
+
+bad_casts = items.filter(
+    "line_no IS NULL OR quantity IS NULL OR unit_price IS NULL OR discount IS NULL"
+).count()
+assert bad_casts == 0, f"{bad_casts} dong order_items ep kieu ra NULL"
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ### Bước 2 · Khử trùng (E01)
+# MAGIC
+# MAGIC Khóa của một dòng hàng là `order_id + line_no`.
+
+# COMMAND ----------
+
+items = drop_technical(latest_per_key(items, ["order_id", "line_no"]))
+
+n_items = items.count()
+n_keys = items.select("order_id", "line_no").distinct().count()
+assert n_items == n_keys, f"Van con trung: {n_items} dong nhung {n_keys} khoa"
+print(f"Sau khu trung: {n_items} dong hang")
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ### Bước 3 · Tách quarantine (E07, E08, E09) và MERGE
+# MAGIC
+# MAGIC Mỗi dòng nhận **một** lý do, xét theo thứ tự:
+# MAGIC 1. E09: dòng thuộc đơn đã bị loại ở bước trước (đơn lỗi thì toàn bộ dòng hàng của đơn cũng bị loại).
+# MAGIC 2. E07: `quantity <= 0`.
+# MAGIC 3. E08: `product_id` không có trong `silver.products`.
+
+# COMMAND ----------
+
+rejected_ids = orders_rejected.select("order_id").withColumn("_order_rejected", F.lit(True))
+known_products = spark.table(tbl("silver", "products")).select("product_id").withColumn("_product_ok", F.lit(True))
+
+items = (
+    items
+    .join(rejected_ids, on="order_id", how="left")
+    .join(known_products, on="product_id", how="left")
+    .withColumn(
+        "reject_reason",
+        F.when(F.col("_order_rejected"), F.lit("E09: don hang bi loai"))
+        .when(F.col("quantity") <= 0, F.lit("E07: quantity <= 0"))
+        .when(F.col("_product_ok").isNull(), F.lit("E08: product_id khong ton tai")),
+    )
+    .drop("_order_rejected", "_product_ok")
+    .select("order_id", "line_no", "product_id", "quantity", "unit_price", "discount", "reject_reason")
+)
+items_rejected = items.filter("reject_reason IS NOT NULL")
+items_valid = items.filter("reject_reason IS NULL").drop("reject_reason")
+
+# COMMAND ----------
+
+overwrite(items_rejected, "order_items_rejected")
+merge_into(items_valid, "order_items", ["order_id", "line_no"])
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ## Kết quả
+# MAGIC
+# MAGIC Số dòng mỗi bảng Silver và số bản ghi bị loại theo từng lý do. Chạy lại notebook, các con số phải giữ nguyên.
+
+# COMMAND ----------
+
+for t in ["stores", "customers", "products", "orders", "orders_rejected", "order_items", "order_items_rejected"]:
+    print(f"{tbl('silver', t):<40}{spark.table(tbl('silver', t)).count():>8} dong")
+
+# COMMAND ----------
+
+reasons = spark.sql(f"""
+    SELECT reject_reason, COUNT(*) AS n FROM {tbl('silver', 'orders_rejected')} GROUP BY reject_reason
+    UNION ALL
+    SELECT reject_reason, COUNT(*) AS n FROM {tbl('silver', 'order_items_rejected')} GROUP BY reject_reason
+    ORDER BY reject_reason
+""")
+for r in reasons.collect():
+    print(f"{r['reject_reason']:<40}{r['n']:>8}")
