@@ -99,7 +99,7 @@ Task 2–11, 16–18, 19–28, 29–32 không song song được vì cùng sửa
   - File: `notebooks/00_config.py`
   - Kiểm chứng: `python -c "exec(open('notebooks/00_config.py').read()); print(tbl('silver','orders'), spark.version)"` in `silver.orders 4.0.1`.
 
-- [ ] **13. `notebooks/01_setup.py`** (nhóm A)
+- [x] **13. `notebooks/01_setup.py`** (nhóm A)
   - Việc: tạo schema `landing`, `bronze`, `silver`, `gold`; volume `landing.raw` chỉ trên Databricks; cell markdown hướng dẫn upload, gồm cả `expected_counts.json`.
   - File: `notebooks/01_setup.py`
   - Kiểm chứng: `python -c "exec(open('notebooks/00_config.py').read()); exec(open('notebooks/01_setup.py').read()); spark.sql('SHOW SCHEMAS').show()"` liệt kê đủ 4 schema.
