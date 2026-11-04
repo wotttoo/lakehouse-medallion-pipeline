@@ -121,7 +121,7 @@ Task 2–11, 16–18, 19–28, 29–32 không song song được vì cùng sửa
   - File: `notebooks/02_bronze.py`
   - Kiểm chứng: `python local/run_local.py --clean --until 02 && python local/check_layer.py bronze.orders && python local/check_layer.py bronze.order_items`.
 
-- [ ] **17. Nạp `products.jsonl`**
+- [x] **17. Nạp `products.jsonl`**
   - Việc: khai báo schema, giữ cấu trúc lồng `price`.
   - File: `notebooks/02_bronze.py`
   - Kiểm chứng: `python local/run_local.py --clean --until 02 && python local/check_layer.py bronze`.

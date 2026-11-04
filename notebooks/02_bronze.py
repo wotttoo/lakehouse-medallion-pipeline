@@ -81,3 +81,41 @@ write_bronze(read_csv("orders_*.csv"), "orders")
 # COMMAND ----------
 
 write_bronze(read_csv("order_items_*.csv"), "order_items")
+
+# COMMAND ----------
+
+# MAGIC %md
+# MAGIC ## Nạp `products.jsonl`
+# MAGIC
+# MAGIC Với JSON ta tự khai báo schema thay vì để Spark đoán. Cột `price` giữ nguyên dạng lồng
+# MAGIC `{amount, currency}`; việc làm phẳng thành cột `unit_list_price` để cho Silver.
+
+# COMMAND ----------
+
+from pyspark.sql.types import StructType, StructField, StringType, LongType, BooleanType
+
+product_schema = StructType([
+    StructField("product_id", StringType()),
+    StructField("product_name", StringType()),
+    StructField("category", StringType()),
+    StructField("price", StructType([
+        StructField("amount", LongType()),
+        StructField("currency", StringType()),
+    ])),
+    StructField("is_active", BooleanType()),
+])
+
+# COMMAND ----------
+
+def read_json(pattern, schema):
+    return (
+        spark.read.format("json")
+        .schema(schema)
+        .load(f"{RAW_PATH}/{pattern}")
+        .withColumn("_ingested_at", F.current_timestamp())
+        .withColumn("_source_file", F.col("_metadata.file_path"))
+    )
+
+# COMMAND ----------
+
+write_bronze(read_json("products.jsonl", product_schema), "products")
