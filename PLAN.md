@@ -104,7 +104,7 @@ Task 2–11, 16–18, 19–28, 29–32 không song song được vì cùng sửa
   - File: `notebooks/01_setup.py`
   - Kiểm chứng: `python -c "exec(open('notebooks/00_config.py').read()); exec(open('notebooks/01_setup.py').read()); spark.sql('SHOW SCHEMAS').show()"` liệt kê đủ 4 schema.
 
-- [ ] **14. `local/run_local.py`** (nhóm A)
+- [x] **14. `local/run_local.py`** (nhóm A)
   - Việc: chạy notebook bằng `exec` trong cùng namespace; tham số `--clean`, `--twice`, và thêm `--until NN` để dừng sau notebook NN khi kiểm chứng từng phần. `--clean` chỉ xóa warehouse/metastore.
   - File: `local/run_local.py`
   - Kiểm chứng: `python local/run_local.py --clean --until 01` exit code 0; `data/raw` còn nguyên.
