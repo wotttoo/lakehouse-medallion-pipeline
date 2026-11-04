@@ -187,22 +187,22 @@ Mỗi bước xử lý một cell.
 
 ### Giai đoạn 5: Gold
 
-- [ ] **29. `dim_date` và `dim_store`**
+- [x] **29. `dim_date` và `dim_store`**
   - Việc: `dim_date` đủ 365 ngày; surrogate key bằng `row_number()` theo natural key; cell markdown giải thích lý do rebuild.
   - File: `notebooks/04_gold.py`
   - Kiểm chứng: `python local/run_local.py --clean --until 04 && python local/check_layer.py gold.dim_date && python local/check_layer.py gold.dim_store`.
 
-- [ ] **30. `dim_customer` và `dim_product`**
+- [x] **30. `dim_customer` và `dim_product`**
   - Việc: thêm dòng `customer_key = -1`, "Khách vãng lai".
   - File: `notebooks/04_gold.py`
   - Kiểm chứng: như task 29 với `gold.dim_customer`, `gold.dim_product`.
 
-- [ ] **31. `fact_sales`**
+- [x] **31. `fact_sales`**
   - Việc: dựng fact grain một dòng sản phẩm trong một đơn; `customer_id` rỗng map sang `-1`; tính `revenue`. Thêm `assert` số dòng fact bằng `silver.order_items`.
   - File: `notebooks/04_gold.py`
   - Kiểm chứng: như task 29 với `gold.fact_sales`.
 
-- [ ] **32. Hai bảng agg**
+- [x] **32. Hai bảng agg**
   - Việc: `agg_monthly_store_revenue` (doanh thu, số đơn, AOV), `agg_category_city_revenue`.
   - File: `notebooks/04_gold.py`
   - Kiểm chứng: `python local/run_local.py --clean --until 04 --twice && python local/check_layer.py gold`.
