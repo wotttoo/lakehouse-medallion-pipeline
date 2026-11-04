@@ -35,7 +35,7 @@ Task 2–11, 16–18, 19–28, 29–32 không song song được vì cùng sửa
 
 ### Giai đoạn 0: Nền tảng
 
-- [ ] **1. Khởi tạo repo và môi trường**
+- [x] **1. Khởi tạo repo và môi trường**
   - Việc: `git init`; tạo `.gitignore` (`.venv/`, `__pycache__/`, `spark-warehouse/`, `metastore_db/`, `derby.log`); tạo `requirements.txt` với `pyspark==4.0.1`, `delta-spark==4.0.0`; tạo `.venv` và cài đặt.
   - File: `.gitignore`, `requirements.txt`
   - Kiểm chứng: `git rev-parse --is-inside-work-tree` in `true`; `python -c "import pyspark, delta; print(pyspark.__version__)"` in `4.0.1`.
