@@ -214,7 +214,7 @@ Mỗi bước xử lý một cell.
   - File: `sql/business_questions.sql`
   - Kiểm chứng: `grep -c '^-- Q[1-5]' sql/business_questions.sql` ra 5.
 
-- [ ] **34. `notebooks/05_serving.py`** (nhóm B, luồng 1, sau 33)
+- [x] **34. `notebooks/05_serving.py`** (nhóm B, luồng 1, sau 33)
   - Việc: chạy từng truy vấn qua `spark.sql` và in kết quả; cell markdown cuối hướng dẫn tạo dashboard.
   - File: `notebooks/05_serving.py`, `sql/business_questions.sql`
   - Kiểm chứng: `python local/run_local.py --clean --until 05` exit code 0 và in đủ 5 kết quả.
