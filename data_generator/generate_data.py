@@ -156,6 +156,99 @@ def gen_products(rng):
     return products
 
 
+N_ORDERS = 20000
+GUEST_RATE = 0.05  # E10: khach vang lai, khong phai loi
+PAYMENT_METHODS = [("cash", 0.45), ("card", 0.25), ("momo", 0.20), ("bank_transfer", 0.10)]
+ORDER_HEADER = ["order_id", "order_date", "customer_id", "store_id", "payment_method"]
+ITEM_HEADER = ["order_id", "line_no", "product_id", "quantity", "unit_price", "discount"]
+
+
+def day_weight(d):
+    w = 1.0
+    if d.weekday() >= 5:      # thu 7, chu nhat
+        w *= 1.4
+    if d.month in (1, 2):     # mua Tet
+        w *= 1.5
+    if d.month == 12:         # cuoi nam
+        w *= 1.15
+    return w
+
+
+def weighted_sample_distinct(rng, items, weights, k):
+    chosen = []
+    while len(chosen) < k:
+        x = rng.choices(items, weights=weights, k=1)[0]
+        if x not in chosen:
+            chosen.append(x)
+    return chosen
+
+
+def gen_orders(rng, customers, products):
+    """Sinh don hang va dong hang SACH. Moi don: dict co 'items' (list dict)."""
+    days = [date(YEAR, 1, 1) + timedelta(days=i) for i in range(365)]
+    order_days = sorted(rng.choices(days, weights=[day_weight(d) for d in days], k=N_ORDERS))
+
+    store_ids = [s[0] for s in STORES]
+    store_w = [s[4] for s in STORES]
+    cust_ids = [c["customer_id"] for c in customers]
+    cust_w = [rng.expovariate(1.0) for _ in cust_ids]  # co khach mua nhieu, khach mua it
+    prod_ids = [p["product_id"] for p in products]
+    prod_w = [p["_weight"] for p in products]
+    price = {p["product_id"]: p["price"]["amount"] for p in products}
+
+    orders = []
+    for i, d in enumerate(order_days, start=1):
+        is_guest = rng.random() < GUEST_RATE
+        o = {
+            "order_id": f"O{i:06d}",
+            "order_date": d,
+            "customer_id": "" if is_guest else rng.choices(cust_ids, weights=cust_w, k=1)[0],
+            "store_id": rng.choices(store_ids, weights=store_w, k=1)[0],
+            "payment_method": pick_weighted(rng, PAYMENT_METHODS),
+            "items": [],
+        }
+        n_lines = rng.choices([1, 2, 3, 4, 5], weights=[25, 30, 22, 14, 9], k=1)[0]
+        for line_no, pid in enumerate(weighted_sample_distinct(rng, prod_ids, prod_w, n_lines), 1):
+            qty = rng.choices([1, 2, 3, 4, 5, 6], weights=[50, 25, 12, 7, 4, 2], k=1)[0]
+            unit_price = price[pid]
+            discount = 0
+            if rng.random() < 0.25:
+                discount = max(1000, round(qty * unit_price * rng.uniform(0.03, 0.15) / 1000) * 1000)
+                discount = min(discount, qty * unit_price - 1000)
+                discount = max(discount, 0)
+            o["items"].append({
+                "order_id": o["order_id"], "line_no": line_no, "product_id": pid,
+                "quantity": qty, "unit_price": unit_price, "discount": discount,
+            })
+        orders.append(o)
+    return orders
+
+
+def order_row(o):
+    d = o["order_date"]
+    return [o["order_id"], o.get("order_date_raw", d.isoformat() if isinstance(d, date) else d),
+            o["customer_id"], o["store_id"], o["payment_method"]]
+
+
+def item_row(it):
+    return [it["order_id"], it["line_no"], it["product_id"],
+            it.get("quantity_raw", it["quantity"]), it.get("unit_price_raw", it["unit_price"]),
+            it["discount"]]
+
+
+def write_month_files(raw_dir, orders):
+    """Ghi 12 cap file thang. Moi don co the co nhieu dong (E02) qua key '_copies'."""
+    for m in range(1, 13):
+        month_orders = [o for o in orders if o["month"] == m]
+        o_rows, i_rows = [], []
+        for o in month_orders:
+            for _ in range(o.get("_copies", 1)):
+                o_rows.append(order_row(o))
+            i_rows.extend(item_row(it) for it in o["items"])
+        write_csv(raw_dir / f"orders_{YEAR}_{m:02d}.csv", ORDER_HEADER, o_rows)
+        write_csv(raw_dir / f"order_items_{YEAR}_{m:02d}.csv", ITEM_HEADER, i_rows)
+
+
 def write_jsonl(path, records):
     with open(path, "w", encoding="utf-8", newline="\n") as f:
         for r in records:
@@ -204,6 +297,11 @@ def main():
     products = gen_products(rng)
     write_jsonl(raw_dir / "products.jsonl",
                 [{k: v for k, v in p.items() if not k.startswith("_")} for p in products])
+
+    orders = gen_orders(rng, customers, products)
+    for o in orders:
+        o["month"] = o["order_date"].month  # file thang theo ngay goc
+    write_month_files(raw_dir, orders)
     print(f"Da ghi du lieu vao {raw_dir}")
 
 

@@ -57,7 +57,7 @@ Task 2–11, 16–18, 19–28, 29–32 không song song được vì cùng sửa
   - File: `data_generator/generate_data.py`, `data/raw/products.jsonl`
   - Kiểm chứng: `python -c "import json; r=[json.loads(l) for l in open('data/raw/products.jsonl',encoding='utf-8')]; print(len(r), r[0]['price'])"` in khoảng 150 và dict có `amount`, `currency`.
 
-- [ ] **5. Sinh orders và order_items sạch**
+- [x] **5. Sinh orders và order_items sạch**
   - Việc: 12 cặp file tháng, ~20.000 đơn, ~50.000 dòng; có xu hướng cuối tuần, tháng Tết, thành phố lớn, long-tail. Giữ bộ dữ liệu sạch trong bộ nhớ để tính đáp án ở task 10.
   - File: `data_generator/generate_data.py`, `data/raw/orders_2025_MM.csv`, `data/raw/order_items_2025_MM.csv`
   - Kiểm chứng: `ls data/raw/orders_2025_*.csv | wc -l` ra 12; `cat data/raw/order_items_2025_*.csv | wc -l` ra khoảng 50.000.
